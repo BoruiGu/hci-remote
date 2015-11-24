@@ -1,17 +1,29 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="UCBApp" ng-controller="UCBCtrl">
 <head>
     <title>HCI TEAM HOMEPAGE</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="app.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class="container" style="margin-left: 19.1%; margin-right: 19.1%;">
+    <div class="container">
         <h1>TEAM ________</h1>
         <h3><a href="http://www.ccs.neu.edu/course/cs5340/" target="_blank">CS5340 Human-Computer Interaction 2015 Fall</a></h3>
         <h3>Team Members:</h3>
         <p>Ameneh Shamekhi <a href="mailto:shamekhi.a@husky.neu.edu" target="_blank">shamekhi.a@husky.neu.edu</a></p>
         <p>Borui Gu <a href="mailto:gu.b@husky.neu.edu" target="_blank">gu.b@husky.neu.edu</a></p>
         <p>Chini Sinha <a href="mailto:sinha.c@husky.neu.edu" target="_blank">sinha.c@husky.neu.edu</a></p>
-        <p>Everlyne Kimani <a href="mailto:kimani.e@husky.neu.edu" target="_blank">kimani.e@husky.neu.edu</a></p>
+        <p>Everlyne Kimani <a href="mailto:kimani.e@husky.neu.edu" target="_blank">kimani.e@husky.neu.edu</a></p>		
+		<h3>PlayGround</h3>
+		<p>{{angular_hello}}</p>
+		<p>{{node_hello}}</p>
     </div>
 </body>
 </html>
