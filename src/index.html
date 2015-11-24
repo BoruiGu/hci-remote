@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="UCBApp" ng-controller="UCBCtrl">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="UCBApp" ng-controller="HomeCtrl">
 <head>
     <title>HCI TEAM HOMEPAGE</title>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -10,9 +10,48 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
     <script src="app.js"></script>
+    <script src="controller/home.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+    <!-- Header -->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#/">
+                    <img class="UCB-nav-logo" src="http://www.ucbapp.org/images/UCB-Logo-Acronym.png" alt="UCB Logo"></a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="my-navbar-collapse">                               
+                <ul class="nav navbar-nav hidden-sm">
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" id="header-event-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="header-event-dropdown">
+                            <li><a href="#">UCB Events</a></li>
+                            <li><a href="#">Member Initiated Events</a></li>
+                            <li><a href="#">{{username}}'s Events</a></li>
+                        </ul>
+                    </li>                    
+                    <li><a href="#">Check In</a></li>
+                    <li><a href="#">Points</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <!-- Assert: User Has Logged In -->
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/profile">Profile</a></li>
+                    <li><a href="" ng-click="logout()">Sign Out</a></li>
+                </ul>
+            </div>
+            <!--/.navbar-collapse -->
+        </div>
+    </nav>
     <div class="container">
         <h1>TEAM ________</h1>
         <h3><a href="http://www.ccs.neu.edu/course/cs5340/" target="_blank">CS5340 Human-Computer Interaction 2015 Fall</a></h3>
