@@ -11,7 +11,7 @@
         console.log(status);
     });
 
-    // this line will be removed after login screen created
+    // TODO: this line will be removed after login screen created
     $rootScope.username = 'Sharon';
     $scope.username = $rootScope.username;
 });
