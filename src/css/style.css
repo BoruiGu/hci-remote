@@ -1,4 +1,4 @@
-﻿body {
+body {
     padding-top: 40px;
 }
 
@@ -16,5 +16,10 @@ span.icon-bar {
 }
 
 .navbar-brand {
-    padding: 1px;
+    padding-top: 3px;
+    padding-right: 20px;
+}
+
+.navbar-collapse#my-navbar-collapse {
+	max-height: 360px;
 }
