@@ -10,7 +10,7 @@ span.icon-bar {
     background-color: black;
 }
 
-.UCB-nav-logo {
+.nav-ucb-logo {
     height: 40px;
     border: 0;
 }
@@ -22,4 +22,12 @@ span.icon-bar {
 
 .navbar-collapse#my-navbar-collapse {
     max-height: 360px;
+}
+
+.fixed-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
 }
