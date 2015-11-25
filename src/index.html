@@ -1,8 +1,8 @@
 ﻿<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" ng-app="UCBApp" ng-controller="HomeCtrl">
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="UCBApp" ng-controller="HeaderCtrl">
 <head>
     <title>Union Capital</title>
-	<link rel="shortcut icon" href="http://www.ucbapp.org/images/UCBfavicon.png">
+    <link rel="shortcut icon" href="http://www.ucbapp.org/images/UCBfavicon.png">
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" integrity="sha384-aUGj/X2zp5rLCbBxumKTCw2Z50WgIr1vs/PFN4praOTvYXWlVyh2UtNUU0KAUhAX" crossorigin="anonymous">
@@ -10,14 +10,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+    <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
     <script src="app.js"></script>
-    <script src="controller/home.js"></script>
+    <script src="header.js"></script>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="partial/home/home.js"></script>
+    <script src="partial/login/login.js"></script>
 </head>
-<body>
+<body ng-class="{'has-padding-top': !isLoginPage}">
     <!-- Header -->
-    <nav class="navbar navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" ng-if="!isLoginPage">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -26,45 +29,36 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#/">
-                    <img class="UCB-nav-logo" src="http://www.ucbapp.org/images/UCB-Logo-Acronym.png" alt="UCB Logo"></a>
+                <a class="navbar-brand" href="#/home">
+                    <img class="UCB-nav-logo" src="http://www.ucbapp.org/images/UCB-Logo-Acronym.png" alt="UCB Logo">
+                </a>
             </div>
 
-            <div class="collapse navbar-collapse" id="my-navbar-collapse">                               
+            <div class="collapse navbar-collapse" id="my-navbar-collapse">
                 <ul class="nav navbar-nav hidden-sm">
                     <li class="dropdown active">
-                        <a href="#" class="dropdown-toggle" id="header-event-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle" id="header-event-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="header-event-dropdown">
-                            <li><a href="#">UCB Events</a></li>
-                            <li><a href="#">Member Initiated Events</a></li>
-                            <li><a href="#">{{username}}'s Events</a></li>
+                            <li><a href="#/home">UCB Events</a></li>
+                            <li><a href="#/home">Member Initiated Events</a></li>
+                            <li><a href="#/home">{{username}}'s Events</a></li>
                         </ul>
-                    </li>                    
-                    <li><a href="#">Check In</a></li>
-                    <li><a href="#">Points</a></li>
-                    <li><a href="#">Contact</a></li>
+                    </li>
+                    <li><a href="#/home">Check In</a></li>
+                    <li><a href="#/home">Points</a></li>
+                    <li><a href="#/home">Contact</a></li>
                 </ul>
                 <!-- Assert: User Has Logged In -->
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#/profile">Profile</a></li>
-                    <li><a href="" ng-click="logout()">Sign Out</a></li>
+                    <li><a href="#/login">Sign Out</a></li>
                 </ul>
             </div>
             <!--/.navbar-collapse -->
         </div>
     </nav>
-    <div class="container">
-        <h1>TEAM ________</h1>
-        <h3><a href="http://www.ccs.neu.edu/course/cs5340/" target="_blank">CS5340 Human-Computer Interaction 2015 Fall</a></h3>
-        <h3>Team Members:</h3>
-        <p>Ameneh Shamekhi <a href="mailto:shamekhi.a@husky.neu.edu" target="_blank">shamekhi.a@husky.neu.edu</a></p>
-        <p>Borui Gu <a href="mailto:gu.b@husky.neu.edu" target="_blank">gu.b@husky.neu.edu</a></p>
-        <p>Chini Sinha <a href="mailto:sinha.c@husky.neu.edu" target="_blank">sinha.c@husky.neu.edu</a></p>
-        <p>Everlyne Kimani <a href="mailto:kimani.e@husky.neu.edu" target="_blank">kimani.e@husky.neu.edu</a></p>		
-		<h3>PlayGround</h3>
-		<p>{{angular_hello}}</p>
-		<p>{{node_hello}}</p>
-		<p>HEY</p>
+    <div class="container" ng-view>
+
     </div>
 </body>
 </html>

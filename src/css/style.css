@@ -1,4 +1,4 @@
-body {
+.has-padding-top {
     padding-top: 40px;
 }
 
@@ -10,7 +10,7 @@ span.icon-bar {
     background-color: black;
 }
 
-.UCB-nav-logo{
+.UCB-nav-logo {
     height: 40px;
     border: 0;
 }
@@ -21,5 +21,5 @@ span.icon-bar {
 }
 
 .navbar-collapse#my-navbar-collapse {
-	max-height: 360px;
+    max-height: 360px;
 }
