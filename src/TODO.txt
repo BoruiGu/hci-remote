@@ -1,1 +1,2 @@
 "active" Events
+click outside dropdown to close
