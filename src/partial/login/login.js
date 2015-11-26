@@ -1,4 +1,4 @@
-app.controller("LoginCtrl", function ($scope, $rootScope, $location, POPUP) {
+app.controller("LoginCtrl", function ($scope, $rootScope, $location, PopUp) {
     $scope.login = function (user) {
         $rootScope.username = user.username;
         $rootScope.$emit('UsernameUpdated');
@@ -6,6 +6,6 @@ app.controller("LoginCtrl", function ($scope, $rootScope, $location, POPUP) {
     };
 
     $scope.popup = function (msg) {
-        POPUP.popup(msg);
+        PopUp.popup(msg);
     };
 });

@@ -17,7 +17,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="partial/home/home.js"></script>
     <script src="partial/login/login.js"></script>
+    <script src="partial/my_event/my_event.js"></script>
     <script src="service/popup.js"></script>
+    <script src="service/event.js"></script>
+    <script src="filter/datetime.js"></script>
 </head>
 <body ng-class="{'has-padding-top': !isLoginPage}">
     <!-- Header -->
@@ -42,7 +45,7 @@
                         <ul class="dropdown-menu" aria-labelledby="header-event-dropdown">
                             <li><a href="#/home">UCB Events</a></li>
                             <li><a href="#/home">Member Initiated Events</a></li>
-                            <li><a href="#/home">{{username}}'s Events</a></li>
+                            <li><a href="#/myevent">{{username}}'s Events</a></li>
                         </ul>
                     </li>
                     <li><a href="#/home">Check In</a></li>

@@ -1,4 +1,4 @@
-﻿app.factory('POPUP', function () {
+﻿app.factory('PopUp', function () {
     return {
         popup: function (msg) {
             alert(msg);
