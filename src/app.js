@@ -15,6 +15,10 @@ function ($routeProvider) {
           templateUrl: 'partial/my_event/my_event.html',
           controller: 'MyEventCtrl'
       }).
+      when('/event/details/:id', {
+          templateUrl: 'partial/event_details/event_details.html',
+          controller: 'EventDetailsCtrl'
+      }).        
       otherwise({
           redirectTo: '/login'
       });

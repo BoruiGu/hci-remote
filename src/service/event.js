@@ -12,6 +12,13 @@
             .success(function (response) {
                 callback(response);
             });
-        }
+        },
+
+        eventDetails: function (id, callback) {
+            $http.get("/api/event/byid/" + id)
+            .success(function (response) {
+                callback(response);
+            });
+        },
     };
 });

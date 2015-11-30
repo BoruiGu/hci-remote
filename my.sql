@@ -12,6 +12,8 @@ num_pts_per_hour int,
 creator varchar(255) not null DEFAULT 'UCB'
 );
 
+alter table event add nearest_stop varchar(255);
+
 create table rsvp (
 event_id int not null,
 username varchar(255) not null,

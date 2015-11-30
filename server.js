@@ -42,6 +42,17 @@ app.get('/api/event/bycreator/:username', function (req, res) {
     });
 });
 
+app.get('/api/event/byid/:id', function (req, res) {
+    var id = req.params.id;
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'where id = ? ';
+    connection.query(queryString, id,
+    function (err, rows, fields) {
+        res.json(rows[0]);
+    });
+});
+
 app.get('/api/rsvp/:id', function (req, res) {
     var id = req.params.id;
     var queryString = 'select username, message '
