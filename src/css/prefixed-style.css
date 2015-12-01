@@ -96,3 +96,9 @@ span.icon-bar {
 .event_list_date {
     text-align: center;
 }
+
+.modal-header {
+    padding:9px 15px;
+    border-bottom:1px solid #eee;
+    background-color: #6CBB3C;
+ }
