@@ -20,8 +20,10 @@
     <script src="partial/my_event/my_event.js"></script>
     <script src="partial/my_level/my_level.js"></script>
     <script src="partial/event_details/event_details.js"></script>
+    <script src="partial/ucb_event/ucb_event.js"></script>
     <script src="service/popup.js"></script>
     <script src="service/event.js"></script>
+    <script src="service/user.js"></script>
     <script src="filter/datetime.js"></script>
 </head>
 <body ng-class="{'has-padding-top': !isLoginPage}">
@@ -45,7 +47,7 @@
                     <li class="dropdown active">
                         <a href="" class="dropdown-toggle" id="header-event-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Events <span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="header-event-dropdown">
-                            <li><a href="#/home">UCB Events</a></li>
+                            <li><a href="#/event/ucb">UCB Events</a></li>
                             <li><a href="#/home">Member Initiated Events</a></li>
                             <li><a href="#/my/event">{{username}}'s Events</a></li>
                         </ul>

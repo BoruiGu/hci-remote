@@ -9,14 +9,14 @@ layout
 my_event.html 
 description of 'create event' feature
 cancel event
-center align
 
 add link to tutorial
-add "delete" btn in my events
 
 where to put link to level page
 how do display level to public
 add setting in profile: opt-in display to public level; add text in level page that there's such setting that ...
 level icon partially gray
 
-list of event format: UCB event, my event, member initiated event -> consistent?
+List of event order?
+ucb event & member initiated event: today -> future
+my events: future -> today -> past??

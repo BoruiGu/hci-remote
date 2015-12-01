@@ -134,7 +134,7 @@ app.get('/api/hello/:val', function (req, res) {
 
 app.get('/api/event/bycreator/:username', function (req, res) {
     var username = req.params.username;
-    var queryString = 'select id, st_time, title, description '
+    var queryString = 'select * '
                     + 'from event '
                     + 'where creator = ? '
                     + 'order by st_time desc';
@@ -155,7 +155,7 @@ app.get('/api/event/byid/:id', function (req, res) {
     });
 });
 
-app.get('/api/rsvp/:id', function (req, res) {
+app.get('/api/rsvp/byid/:id', function (req, res) {
     var id = req.params.id;
     var queryString = 'select username, message '
                     + 'from rsvp '
@@ -164,6 +164,25 @@ app.get('/api/rsvp/:id', function (req, res) {
     connection.query(queryString, id,
     function (err, rows, fields) {
         res.json(rows);
+    });
+});
+
+app.get('/api/rsvp/byusername/:username', function (req, res) {
+    var username = req.params.username;
+    var queryString = 'select event_id, message '
+                    + 'from rsvp '
+                    + 'where username = ? '
+                    + 'order by rsvp_time desc';
+    connection.query(queryString, username,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
+
+app.post('/api/rsvp/', function (req, res) {
+    connection.query('insert into rsvp SET ?', req.body, 
+    function (err, rows, fields) {
+        res.send(200);
     });
 });
 
