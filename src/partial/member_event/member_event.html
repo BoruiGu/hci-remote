@@ -1,0 +1,42 @@
+﻿<div class="col-lg-2 visible-lg-block"></div>
+<div class="col-lg-8 col-xs-12">
+    <form ng-submit="popup('search for: ' + query)" class="input-group">
+        <input ng-model="query" type="text" class="form-control" placeholder="Search for...">
+        <span class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </span>
+    </form><!-- /search box -->
+    <br />
+    <table class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
+        <tbody ng-repeat="e in events">
+            <tr ng-if="isFirstEventInNewDate($index)"
+                class="event_list_date">
+                <td colspan="2">{{e.st_time | date}}</td>
+            </tr>
+            <tr ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+                <td class="col-xs-3">{{e.st_time | time}}</td>
+                <td class="col-xs-9">{{e.title}}</td>
+            </tr>
+            <tr ng-show="$scope.curr == $index">
+                <td colspan="2">
+                    <p>Created By: {{e.creator}}</p>
+                    <p>{{e.description}}</p>
+                    <p>{{e.st_time | time}} to {{e.ed_time | time}}</p>
+                    <p>Number of points per hour: {{e.num_pts_per_hour}}</p>
+                    <a href="#/event/details/{{e.id}}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <br />
+                    <!-- User has rsvped to this event -->
+                    <p ng-show="rsvpinfo[$index]">You have RSVPed to this event</p>
+                    <!-- User has not rsvped to this event and User is not the creator of the event -->
+                    <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment)">
+                        <textarea class="form-control" rows="3" ng-model="comment"></textarea>
+                        <button class="btn" type="submit">RSVP</button>
+                    </form>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div class="col-lg-2 visible-lg-block"></div>

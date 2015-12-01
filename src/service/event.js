@@ -6,11 +6,18 @@
                 callback(response);
             });
         },
-
-        eventRsvpInfo: function (event_id, callback) {
-            $http.get("/api/rsvp/byid/" + event_id)
+        /* events created by any user except "UCB" */
+        eventCreatedByMember: function (callback) {
+            $http.get("/api/event/bymember/")
             .success(function (response) {
                 callback(response);
+            });
+        },
+
+        eventRsvpInfo: function (idx, event_id, callback) {
+            $http.get("/api/rsvp/byid/" + event_id)
+            .success(function (response) {
+                callback(idx, response);
             });
         },
 

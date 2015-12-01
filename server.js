@@ -143,6 +143,17 @@ app.get('/api/event/bycreator/:username', function (req, res) {
         res.json(rows);
     });
 });
+/* events created by any user except "UCB" */
+app.get('/api/event/bymember/', function (req, res) {
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'where creator != "UCB" '
+                    + 'order by st_time desc';
+    connection.query(queryString,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
 
 app.get('/api/event/byid/:id', function (req, res) {
     var id = req.params.id;

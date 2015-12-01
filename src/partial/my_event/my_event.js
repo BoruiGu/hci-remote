@@ -7,8 +7,8 @@
     Event.eventCreatedByUser($scope.username, function (response) {
         $scope.user_created_events = response;
         for (var i in $scope.user_created_events) {
-            Event.eventRsvpInfo($scope.user_created_events[i].id, function (info) {
-                $scope.user_created_events[i]['msg'] = info;
+            Event.eventRsvpInfo(i, $scope.user_created_events[i].id, function (idx, info) {
+                $scope.user_created_events[idx]['msg'] = info;
             });
         }
     });

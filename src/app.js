@@ -26,6 +26,10 @@ function ($routeProvider) {
       when('/event/ucb/', {
           templateUrl: 'partial/ucb_event/ucb_event.html',
           controller: 'UCBEventCtrl'
+      }).
+      when('/event/member/', {
+          templateUrl: 'partial/member_event/member_event.html',
+          controller: 'MemberEventCtrl'
       }).        
       otherwise({
           redirectTo: '/login'
