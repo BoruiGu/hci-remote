@@ -1,4 +1,4 @@
-﻿app.controller("MyEventCtrl", function ($scope, $rootScope, PopUp, Event) {   
+﻿app.controller("MyEventCtrl", function ($scope, $rootScope, $location, PopUp, Event) {   
     $scope.popup = function (msg) {
         PopUp.popup(msg);
     };
@@ -23,5 +23,9 @@
         return (prev_date_obj.getDate() != curr_date_obj.getDate())
                || (prev_date_obj.getMonth() != curr_date_obj.getMonth())
                || (prev_date_obj.getYear() != curr_date_obj.getYear());
+    };
+
+    $scope.gotoCreateEvent = function () {
+        $location.path('/event/create');
     };
 });

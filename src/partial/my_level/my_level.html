@@ -3,7 +3,7 @@
         <div ng-click="$scope.curr = (($scope.curr == $index) || (l.level_completion_rate == 0.0)) ? -1 : $index"
              class="level-details col-xs-6">
             <!-- TODO: use l.level_icon_src as src -->
-            <img src="http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg"
+            <img ng-src="{{l.level_icon_src}}"
                  alt="{{l.level_name}}"
                  class="img-rounded img-responsive"
                  ng-class="{'gray-img': l.level_completion_rate == 0.0}">

@@ -30,7 +30,7 @@ var sample_level_data = [
     {
         level_name: "Lv 1",
         level_description: "Lv1 Description",
-        level_icon_src: null, /* link to icon file */        
+        level_icon_src: "image/level/bronze-UCB.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -50,7 +50,7 @@ var sample_level_data = [
     {
         level_name: "Lv 2",
         level_description: "Lv2 Description",
-        level_icon_src: null, /* link to icon file */
+        level_icon_src: "image/level/silverUCB.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -76,7 +76,7 @@ var sample_level_data = [
     {
         level_name: "Lv 3",
         level_description: "Lv3 Description",
-        level_icon_src: null, /* link to icon file */
+        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
         level_completion_rate: 0.75, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -108,21 +108,21 @@ var sample_level_data = [
     {
         level_name: "Lv 4",
         level_description: "Lv4 Description",
-        level_icon_src: null, /* link to icon file */
+        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
         level_name: "Lv 5",
         level_description: "Lv5 Description",
-        level_icon_src: null, /* link to icon file */
+        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
         level_name: "Lv 6",
         level_description: "Lv6 Description",
-        level_icon_src: null, /* link to icon file */
+        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     }

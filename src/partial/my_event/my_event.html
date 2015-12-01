@@ -9,7 +9,7 @@
         </span>
     </form><!-- /search box -->
     <br />
-    <button class="btn col-xs-12">Create Event</button>
+    <button class="btn col-xs-12" ng-click="gotoCreateEvent()">Create Event</button>
     <p>{{username}}'s Events:</p>
     <!-- if there's no event created by current user -->
     <p ng-show="user_created_events.length == 0">
