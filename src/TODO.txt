@@ -1,6 +1,5 @@
 header:
 "active" Events
-click outside dropdown to close
 
 login: 
 http://www.thisisyourkingdom.co.uk/wp-login.php?redirect_to=http%3A%2F%2Fwww.thisisyourkingdom.co.uk%2Fwp-admin%2F&reauth=1
