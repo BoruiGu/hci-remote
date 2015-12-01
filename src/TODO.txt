@@ -18,3 +18,5 @@ where to put link to level page
 how do display level to public
 add setting in profile: opt-in display to public level; add text in level page that there's such setting that ...
 level icon partially gray
+
+list of event format: UCB event, my event, member initiated event -> consistent?

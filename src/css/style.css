@@ -61,3 +61,7 @@ span.icon-bar {
 .gray-img {
     filter: grayscale(100%);
 }
+
+.event_list_date {
+    text-align: center;
+}

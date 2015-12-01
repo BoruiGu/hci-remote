@@ -92,3 +92,7 @@ span.icon-bar {
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
 }
+
+.event_list_date {
+    text-align: center;
+}
