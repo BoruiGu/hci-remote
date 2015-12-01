@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
     <script src="https://code.angularjs.org/1.4.7/angular-route.min.js"></script>
     <script src="app.js"></script>
-    <script src="header.js?v=201512011650"></script>
+    <script src="header.js"></script>
     <link rel="stylesheet" href="css/prefixed-style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <script src="partial/home/home.js"></script>
@@ -29,7 +29,7 @@
 </head>
 <body ng-class="{'has-padding-top': !isLoginPage}">
     <!-- Header -->
-    <nav class="navbar navbar-fixed-top" ng-if="!isLoginPage">
+    <nav class="navbar navbar-fixed-top" ng-show="!isLoginPage">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#my-navbar-collapse" aria-expanded="false" aria-controls="navbar">
