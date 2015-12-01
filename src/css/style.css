@@ -39,3 +39,25 @@ span.icon-bar {
 .event-list-wrapper {
     padding-left: 0px;
 }
+
+.level-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badges-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.badge-showcase {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.gray-img {
+    filter: grayscale(100%);
+}

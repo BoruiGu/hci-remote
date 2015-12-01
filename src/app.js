@@ -11,9 +11,13 @@ function ($routeProvider) {
 	      templateUrl: 'partial/login/login.html',
 	      controller: 'LoginCtrl'
 	  }).
-      when('/myevent', {
+      when('/my/event', {
           templateUrl: 'partial/my_event/my_event.html',
           controller: 'MyEventCtrl'
+      }).
+      when('/my/level', {
+          templateUrl: 'partial/my_level/my_level.html',
+          controller: 'MyLevelCtrl'
       }).
       when('/event/details/:id', {
           templateUrl: 'partial/event_details/event_details.html',

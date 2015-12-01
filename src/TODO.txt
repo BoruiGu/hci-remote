@@ -15,3 +15,6 @@ add link to tutorial
 add "delete" btn in my events
 
 where to put link to level page
+how do display level to public
+add setting in profile: opt-in display to public level; add text in level page that there's such setting that ...
+level icon partially gray

@@ -1,0 +1,94 @@
+.has-padding-top {
+    padding-top: 70px;
+}
+
+.hidden-thead {
+    display: none !important;
+}
+
+.navbar-fixed-top {
+    background-color: yellowgreen;
+}
+
+span.icon-bar {
+    background-color: black;
+}
+
+.nav-ucb-logo {
+    height: 40px;
+    border: 0;
+}
+
+.navbar-brand {
+    padding-top: 3px;
+    padding-right: 20px;
+}
+
+.navbar-collapse#my-navbar-collapse {
+    max-height: 360px;
+}
+
+.fixed-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.event-list-wrapper {
+    padding-left: 0px;
+}
+
+.level-details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.badges-details {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.badge-showcase {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+}
+
+.gray-img {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+}
