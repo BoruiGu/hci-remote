@@ -10,7 +10,7 @@
                 <span class="glyphicon glyphicon-chevron-left"></span>
             </span>
             <span class="photo-gallery">
-                <img class="img-responsive photo-gallery-item"
+                <img class="photo-gallery-item"
                      ng-repeat="s in photo_src track by $index"
                      ng-src="{{s}}"
                      ng-click="$parent.hide_image_viewer = false; $parent.image_viewer_src = s" />
