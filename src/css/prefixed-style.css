@@ -102,3 +102,89 @@ span.icon-bar {
     border-bottom:1px solid #eee;
     background-color: #6CBB3C;
  }
+
+.photo-gallery-title {
+    position: relative;
+    left: 26px;
+}
+
+.photo-gallery {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    height: 200px;
+    width: calc(100% - 26px);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: auto;
+}
+
+.photo-gallery-item {
+    margin-right: 12px;
+    height: 100%;
+}
+
+.photo-gallery-left-arrow {
+    float: left;
+    position: relative;
+    top: 90px;  
+    -webkit-transform: translate(-10px, -50%);  
+        -ms-transform: translate(-10px, -50%);  
+            transform: translate(-10px, -50%);
+}    
+
+.photo-gallery-right-arrow {
+    float: right;
+    position: relative;
+    top: -110px;  
+    -webkit-transform: translate(13px, -50%);  
+        -ms-transform: translate(13px, -50%);  
+            transform: translate(13px, -50%);
+}    
+
+.image-viewer {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: -webkit-linear-gradient(top, #3c3c3c 0, #222 40%);
+    background-image: linear-gradient(to bottom,#3c3c3c 0,#222 40%);
+    background-repeat: repeat;
+}
+
+/* basic positioning */
+.legend { list-style: none; padding: 0;}
+.legend li:first-child { float: left; margin-right: 10px; }
+.legend li:last-child { float: right; margin-right: 10px; }
+.legend span { 
+    border: 1px solid #ccc; 
+    float: right; 
+    width: 12px; 
+    height: 12px; 
+    margin-left: 4px; 
+    position: relative;
+    top: 4px;
+}
+
+.legend .ucb-legend { background-color: #285692; }
+.legend .member-legend { background-color: #b645b7; }
+
+.ucb-event { background-color: #285692; }
+.member-event {background-color: #b645b7; }

@@ -1,0 +1,78 @@
+﻿<div ng-init="hide_image_viewer = true; image_viewer_src = null;">
+    <div class="row">
+        <div class="col-lg-2 visible-lg-block"></div>
+        <p class="lead photo-gallery-title">Photos</p>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 visible-lg-block"></div>
+        <div class="col-lg-8 col-xs-12">
+            <span class="photo-gallery-left-arrow">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </span>
+            <span class="photo-gallery">
+                <img class="img-responsive photo-gallery-item"
+                     ng-repeat="s in photo_src track by $index"
+                     ng-src="{{s}}"
+                     ng-click="$parent.hide_image_viewer = false; $parent.image_viewer_src = s" />
+            </span>
+            <span class="photo-gallery-right-arrow">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </span>
+        </div>
+        <div class="col-lg-2 visible-lg-block"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 visible-lg-block"></div>
+        <div class="col-lg-8 col-xs-12"><hr /></div>
+        <div class="col-lg-2 visible-lg-block"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-2 visible-lg-block"></div>
+        <div class="col-lg-8 col-xs-12">
+            <form ng-submit="popup('search for: ' + query)" class="input-group">
+                <input ng-model="query" type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </form><!-- /search box -->
+            <br />
+
+            <!-- assume user already created some events -->
+            <!-- ref: http://jsfiddle.net/MTB2q/ -->
+            <ul class="legend">
+                <li>UCB Events <span class="ucb-legend"></span></li>
+                <li>Member Events <span class="member-legend"></span></li>                
+            </ul>
+            <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
+                <tbody ng-repeat="e in events"
+                       ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+                    <tr ng-if="isFirstEventInNewDate($index)"
+                        class="event_list_date">
+                        <td colspan="2">{{e.st_time | date}}</td>
+                    </tr>
+                    <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}">
+                        <td class="col-xs-3">{{e.st_time | time}}</td>
+                        <td class="col-xs-9">{{e.title}}</td>
+                    </tr>
+                    <tr ng-show="$scope.curr == $index">
+                        <td colspan="2">
+                            <p class="lead">Description:</p>
+                            <p>{{e.description}}</p>
+                            <div>RATE EVENT HERE</div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-2 visible-lg-block"></div>
+    </div>
+
+    <!-- image viewer -->
+    <div class="image-viewer"
+         ng-show="!hide_image_viewer"
+         ng-click="hide_image_viewer = true">
+        <img class="img-responsive fixed-center" ng-src="{{image_viewer_src}}" />
+    </div>
+</div>

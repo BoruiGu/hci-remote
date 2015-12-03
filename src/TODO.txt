@@ -14,8 +14,21 @@ add link to tutorial
 where to put link to level page
 how do display level to public
 add setting in profile: opt-in display to public level; add text in level page that there's such setting that ...
-level icon partially gray
 
 List of event order?
 ucb event & member initiated event: today -> future
 my events: future -> today -> past??
+
+Add title for pages
+leave phone number
+Wednesday, December 1st
+cancel RSVP
+Points->History(Pts, Rating)
+Alice's Created Events -> Reversed Chor order
+add label to leave message textbox ; phone number textbox
+
+check-in list of mixed event, in diff background color
+list of ucb / member event also has these two colors
+
+check-in
+search box placeholder

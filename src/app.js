@@ -35,6 +35,14 @@ function ($routeProvider) {
           templateUrl: 'partial/create_event/create_event.html'//,
           //controller: 'MyEventCtrl'
       }).
+      when('/history', {
+          templateUrl: 'partial/history/history.html',
+          controller: 'HistoryCtrl'
+      }).
+      when('/checkin', {
+          templateUrl: 'partial/checkin/checkin.html',
+          controller: 'CheckInCtrl'
+      }).
       otherwise({
           redirectTo: '/login'
       });

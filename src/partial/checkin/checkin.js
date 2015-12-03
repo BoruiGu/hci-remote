@@ -1,0 +1,31 @@
+﻿app.controller("CheckInCtrl", function ($scope, $rootScope, $location, PopUp, Event) {   
+    $scope.popup = function (msg) {
+        PopUp.popup(msg);
+    };
+
+    $scope.username = $rootScope.username;
+    Event.eventCreatedByUser($scope.username, function (response) {
+        $scope.user_created_events = response;
+        for (var i in $scope.user_created_events) {
+            Event.eventRsvpInfo(i, $scope.user_created_events[i].id, function (idx, info) {
+                $scope.user_created_events[idx]['msg'] = info;
+            });
+        }
+    });
+
+    $scope.isFirstEventInNewDate = function (idx) {
+        if (idx == 0) {
+            return true;
+        }
+
+        var prev_date_obj = new Date($scope.user_created_events[idx - 1].st_time);
+        var curr_date_obj = new Date($scope.user_created_events[idx].st_time);
+        return (prev_date_obj.getDate() != curr_date_obj.getDate())
+               || (prev_date_obj.getMonth() != curr_date_obj.getMonth())
+               || (prev_date_obj.getYear() != curr_date_obj.getYear());
+    };
+
+    $scope.gotoCreateEvent = function () {
+        $location.path('/event/create');
+    };
+});
