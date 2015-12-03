@@ -20,7 +20,7 @@
         <tbody ng-repeat="e in user_created_events"
                ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
             <tr ng-if="isFirstEventInNewDate($index)"
-                class="event_list_date">
+                class="table_centered_text">
                 <td colspan="2">{{e.st_time | date}}</td>
             </tr>
             <tr>

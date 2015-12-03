@@ -1,7 +1,8 @@
 ﻿<div ng-init="hide_image_viewer = true; image_viewer_src = null;">
     <div class="row">
         <div class="col-lg-2 visible-lg-block"></div>
-        <p class="lead photo-gallery-title">Photos</p>
+        <span class="lead photo-gallery-title">Photos</span>
+        <span class=" photo-gallery-title">&nbsp; (Swipe to see more)</span>
     </div>
     <div class="row">
         <div class="col-lg-2 visible-lg-block"></div>
@@ -48,8 +49,14 @@
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
                 <tbody ng-repeat="e in events"
                        ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+                    <tr class="table_centered_text" ng-if="$index == 0">
+                        <td colspan="2">Events Waiting For Approval</td>
+                    </tr>
+                    <tr class="table_centered_text" ng-if="$index == 1">
+                        <td colspan="2">Events Attended</td>
+                    </tr>
                     <tr ng-if="isFirstEventInNewDate($index)"
-                        class="event_list_date">
+                        class="table_centered_text">
                         <td colspan="2">{{e.st_time | date}}</td>
                     </tr>
                     <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}">
@@ -60,6 +67,7 @@
                         <td colspan="2">
                             <p class="lead">Description:</p>
                             <p>{{e.description}}</p>
+                            <p>Points Earned: 500 points</p>
                             <div>RATE EVENT HERE</div>
                         </td>
                     </tr>
