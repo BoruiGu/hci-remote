@@ -67,7 +67,8 @@
                         <td colspan="2">
                             <p class="lead">Description:</p>
                             <p>{{e.description}}</p>
-                            <p>Points Earned: 500 points</p>
+                            <p ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
+                            <p ng-if="$index != 0">Points Earned: 500 points</p>
                             <div>RATE EVENT HERE</div>
                         </td>
                     </tr>
