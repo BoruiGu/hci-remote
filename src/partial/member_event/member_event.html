@@ -15,7 +15,7 @@
                 class="table_centered_text">
                 <td colspan="2">{{e.st_time | date}}</td>
             </tr>
-            <tr ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+            <tr class="member-event" ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                 <td class="col-xs-3">{{e.st_time | time}}</td>
                 <td class="col-xs-9">{{e.title}}</td>
             </tr>
