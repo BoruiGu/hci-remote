@@ -27,6 +27,7 @@
                     <br />
                     <!-- User has rsvped to this event -->
                     <p ng-show="rsvpinfo[$index]">You have RSVPed to this event</p>
+                    <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-dangerous">Cancel RSVP</button>
                     <!-- User has not rsvped to this event-->
                     <button ng-hide="rsvpinfo[$index]" ng-click="rsvp(e.id)" class="btn">RSVP</button>
                 </td>

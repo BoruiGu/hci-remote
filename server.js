@@ -197,6 +197,14 @@ app.post('/api/rsvp/', function (req, res) {
     });
 });
 
+app.delete('/api/rsvp/:event_id/:username', function (req, res) {
+    connection.query('delete from rsvp where event_id = ? and username = ?',
+    [req.params.event_id, req.params.username],
+    function (err, rows, fields) {
+        res.send(200);
+    });
+});
+
 app.get('/api/level/:username', function (req, res) {
     var username = req.params.username;
     res.json(sample_level_data);

@@ -53,4 +53,14 @@
             getUserRsvpInfo();
         });
     };
+
+    $scope.cancelRsvp = function (event_id) {
+        var rsvp_info = {
+            event_id: event_id,
+            username: $rootScope.username
+        }
+        Event.cancelRsvp(rsvp_info, function (response) {
+            getUserRsvpInfo();
+        });
+    };
 });

@@ -29,6 +29,7 @@
                     <br />
                     <!-- User has rsvped to this event -->
                     <p ng-show="rsvpinfo[$index]">You have RSVPed to this event</p>
+                    <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-dangerous">Cancel RSVP</button>
                     <!-- User has not rsvped to this event and User is not the creator of the event -->
                     <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment)">
                         <textarea class="form-control" rows="3" ng-model="comment"></textarea>

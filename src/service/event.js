@@ -33,6 +33,15 @@
             .success(function (response) {
                 callback(response);
             });
+        },
+
+        cancelRsvp: function (rsvp_info, callback) {
+            $http.delete("/api/rsvp/" 
+                         + rsvp_info.event_id 
+                         + '/' + rsvp_info.username)
+            .success(function (response) {
+                callback(response);
+            });
         }
     };
 });
