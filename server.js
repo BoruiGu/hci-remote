@@ -137,7 +137,7 @@ app.get('/api/event/bycreator/:username', function (req, res) {
     var queryString = 'select * '
                     + 'from event '
                     + 'where creator = ? '
-                    + 'order by st_time desc';
+                    + 'order by st_time asc';
     connection.query(queryString, username,
     function (err, rows, fields) {
         res.json(rows);
@@ -148,7 +148,7 @@ app.get('/api/event/bymember/', function (req, res) {
     var queryString = 'select * '
                     + 'from event '
                     + 'where creator != "UCB" '
-                    + 'order by st_time desc';
+                    + 'order by st_time asc';
     connection.query(queryString,
     function (err, rows, fields) {
         res.json(rows);
@@ -171,7 +171,7 @@ app.get('/api/rsvp/byid/:id', function (req, res) {
     var queryString = 'select username, message '
                     + 'from rsvp '
                     + 'where event_id = ? '
-                    + 'order by rsvp_time desc';
+                    + 'order by rsvp_time asc';
     connection.query(queryString, id,
     function (err, rows, fields) {
         res.json(rows);
@@ -183,7 +183,7 @@ app.get('/api/rsvp/byusername/:username', function (req, res) {
     var queryString = 'select event_id, message '
                     + 'from rsvp '
                     + 'where username = ? '
-                    + 'order by rsvp_time desc';
+                    + 'order by rsvp_time asc';
     connection.query(queryString, username,
     function (err, rows, fields) {
         res.json(rows);

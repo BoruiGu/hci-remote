@@ -28,6 +28,14 @@ span.icon-bar {
     max-height: 360px;
 }
 
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
 .fixed-center {
     position: fixed;
     top: 50%;

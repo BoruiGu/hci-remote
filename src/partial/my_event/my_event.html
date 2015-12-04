@@ -1,5 +1,6 @@
 ﻿<div class="col-lg-2 visible-lg-block"></div>
 <div class="col-lg-8 col-xs-12">
+    <h3>{{username}}'s Created Events:</h3>
     <form ng-submit="popup('search for: ' + query)" class="input-group">
         <input ng-model="query" type="text" class="form-control" placeholder="Search for...">
         <span class="input-group-btn">
@@ -9,8 +10,7 @@
         </span>
     </form><!-- /search box -->
     <br />
-    <button class="btn col-xs-12" ng-click="gotoCreateEvent()">Create Event</button>
-    <p>{{username}}'s Events:</p>
+    <button class="btn col-xs-12" ng-click="gotoCreateEvent()">Create Event</button>   
     <!-- if there's no event created by current user -->
     <p ng-show="user_created_events.length == 0">
         It seems like you haven't created any events. Member Initiated Events is a newly introduced feature ... TODO

@@ -8,15 +8,6 @@ layout
 my_event.html 
 description of 'create event' feature
 
-add link to tutorial
-
-where to put link to level page
-
-Add title for pages
-leave phone number
-Wednesday, December 1st
-cancel RSVP
-Alice's Created Events -> Reversed Chor order
-add label to leave message textbox ; phone number textbox
+Alice's Created Events, my history -> Reversed Chor order
 
 search box placeholder

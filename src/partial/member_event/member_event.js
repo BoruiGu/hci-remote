@@ -45,11 +45,11 @@
                || (prev_date_obj.getYear() != curr_date_obj.getYear());
     };
 
-    $scope.rsvp = function (event_id, comment) {
+    $scope.rsvp = function (event_id, comment, phone) {
         var rsvp_info = {
             event_id: event_id,
             username: $rootScope.username,
-            message: comment
+            message: comment + '; My Phone #: ' + phone
         }
         Event.rsvp(rsvp_info, function (response) {
             getUserRsvpInfo();
@@ -57,12 +57,15 @@
     };
 
     $scope.cancelRsvp = function (event_id) {
-        var rsvp_info = {
-            event_id: event_id,
-            username: $rootScope.username
-        }
-        Event.cancelRsvp(rsvp_info, function (response) {
-            getUserRsvpInfo();
-        });
+        var yes = confirm("Do you really want to cancel RSVP?");
+        if (yes) {
+            var rsvp_info = {
+                event_id: event_id,
+                username: $rootScope.username
+            }
+            Event.cancelRsvp(rsvp_info, function (response) {
+                getUserRsvpInfo();
+            });
+        };
     };
 });

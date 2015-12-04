@@ -15,8 +15,8 @@
             return true;
         }
 
-        var prev_date_obj = new Date($scope.user_created_events[idx - 1].st_time);
-        var curr_date_obj = new Date($scope.user_created_events[idx].st_time);
+        var prev_date_obj = new Date($scope.events[idx - 1].st_time);
+        var curr_date_obj = new Date($scope.events[idx].st_time);
         return (prev_date_obj.getDate() != curr_date_obj.getDate())
                || (prev_date_obj.getMonth() != curr_date_obj.getMonth())
                || (prev_date_obj.getYear() != curr_date_obj.getYear());

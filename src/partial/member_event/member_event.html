@@ -1,5 +1,6 @@
 ﻿<div class="col-lg-2 visible-lg-block"></div>
 <div class="col-lg-8 col-xs-12">
+    <h3>Member Initiated Events:</h3>
     <form ng-submit="popup('search for: ' + query)" class="input-group">
         <input ng-model="query" type="text" class="form-control" placeholder="Search for...">
         <span class="input-group-btn">
@@ -31,8 +32,11 @@
                     <p ng-show="rsvpinfo[$index]">You have RSVPed to this event</p>
                     <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-dangerous">Cancel RSVP</button>
                     <!-- User has not rsvped to this event and User is not the creator of the event -->
-                    <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment)">
+                    <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment, phone)">
+                        <p>Leave a message to the creator of this event (optional): </p>
                         <textarea class="form-control" rows="3" ng-model="comment"></textarea>
+                        <span>Your phone number (optional): </span>
+                        <input type="text" ng-model="phone"><br />                        
                         <button class="btn" type="submit">RSVP</button>
                     </form>
                 </td>

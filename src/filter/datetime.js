@@ -1,9 +1,12 @@
 ﻿app.filter('date', function () {    
     return function (input) {
         var t = new Date(input);
-        var day_of_week = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-        return day_of_week[t.getDay()] + ' '
-                           + t.getMonth() + '/' + t.getDate();
+        var day_of_week = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+        var month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        var suffix = [null, 'st', 'nd', 'rd', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th', 'th'];
+        return day_of_week[t.getDay()] + ', '
+               + month[t.getMonth()] + ' '
+               + t.getDate() + suffix[t.getDate()];
     };
 });
 

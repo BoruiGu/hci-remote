@@ -1,4 +1,5 @@
 ﻿<div ng-init="$scope.curr = -1">
+    <h3>My Level:</h3>
     <div ng-repeat="l in level_info">
         <div ng-click="$scope.curr = (($scope.curr == $index) || (l.level_completion_rate == 0.0)) ? -1 : $index"
              class="level-details col-xs-6">
