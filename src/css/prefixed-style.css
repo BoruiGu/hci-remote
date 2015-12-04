@@ -190,3 +190,8 @@ span.icon-bar {
 
 .ucb-event { background-color: #285692; }
 .member-event {background-color: #b645b7; }
+
+.nav-pills li {
+    padding: 0;
+    width: 49.865%;
+}

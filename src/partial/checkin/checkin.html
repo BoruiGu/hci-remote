@@ -1,5 +1,5 @@
 ﻿<div class="col-lg-2 visible-lg-block"></div>
-<div class="col-lg-8 col-xs-12">
+<div class="col-lg-8 col-xs-12" ng-init="mode = 'curr'">
     <form ng-submit="popup('search for: ' + query)" class="input-group">
         <input ng-model="query" type="text" class="form-control" placeholder="Search for...">
         <span class="input-group-btn">
@@ -9,21 +9,24 @@
         </span>
     </form><!-- /search box -->
     <br />
-    <button class="btn col-xs-12" ng-click="gotoCreateEvent()">Create Event</button>
-    <p>{{username}}'s Events:</p>
-    <!-- if there's no event created by current user -->
-    <p ng-show="user_created_events.length == 0">
-        It seems like you haven't created any events. Member Initiated Events is a newly introduced feature ... TODO
-    </p>
-    <!-- if user already created some events -->
+    <ul class="nav nav-pills">
+        <li role="presentation" ng-class="{'active': mode == 'curr'}" ng-click="mode = 'curr'"><a href="">Current</a></li>
+        <li role="presentation" ng-class="{'active': mode != 'curr'}" ng-click="mode = 'past'"><a href="">Past</a></li>
+    </ul>
     <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
-        <tbody ng-repeat="e in user_created_events"
+        <tbody ng-if="mode == 'curr'">
+            <tr class="table_centered_text">
+                <td colspan="2">No event happens Today. Do you want to check <a ng-click="$parent.mode = 'past'" href="">Past Event</a>?</td>
+            </tr>
+        </tbody>
+        <tbody ng-if="mode != 'curr'"
+               ng-repeat="e in events"
                ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
                 <td colspan="2">{{e.st_time | date}}</td>
-            </tr>
-            <tr>
+            </tr>            
+            <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}">
                 <td class="col-xs-3">{{e.st_time | time}}</td>
                 <td class="col-xs-9">{{e.title}}</td>
             </tr>
@@ -31,19 +34,7 @@
                 <td colspan="2">
                     <p class="lead">Description:</p>
                     <p>{{e.description}}</p>
-                    <p class="lead"># of attendees: {{e.msg.length ? e.msg.length : 0}}</p>
-                    <p class="lead">Messages:</p>
-                    <!-- if no message -->
-                    <p ng-hide="e.msg.length">No message available.</p>
-                    <!-- if there're messages -->
-                    <table ng-show="e.msg.length" class="table table-condensed table-bordered">
-                        <tbody ng-repeat="m in e.msg">
-                            <tr>
-                                <td class="col-md-2">{{m.username}}</td>
-                                <td class="col-md-10">{{m.message}}</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <p>Check In</p>
                 </td>
             </tr>
         </tbody>

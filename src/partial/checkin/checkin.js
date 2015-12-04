@@ -3,14 +3,11 @@
         PopUp.popup(msg);
     };
 
-    $scope.username = $rootScope.username;
-    Event.eventCreatedByUser($scope.username, function (response) {
-        $scope.user_created_events = response;
-        for (var i in $scope.user_created_events) {
-            Event.eventRsvpInfo(i, $scope.user_created_events[i].id, function (idx, info) {
-                $scope.user_created_events[idx]['msg'] = info;
-            });
-        }
+    Event.eventCreatedByUser("UCB", function (response) {
+        $scope.events = response;
+        Event.eventCreatedByMember(function (response) {
+            $scope.events = $scope.events.concat(response);
+        });
     });
 
     $scope.isFirstEventInNewDate = function (idx) {
@@ -23,9 +20,5 @@
         return (prev_date_obj.getDate() != curr_date_obj.getDate())
                || (prev_date_obj.getMonth() != curr_date_obj.getMonth())
                || (prev_date_obj.getYear() != curr_date_obj.getYear());
-    };
-
-    $scope.gotoCreateEvent = function () {
-        $location.path('/event/create');
     };
 });
