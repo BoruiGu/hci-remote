@@ -141,5 +141,5 @@ span.icon-bar {
 
 .nav-pills li {
     padding: 0;
-    width: 49.865%;
+    width: calc(50% - 1px);
 }
