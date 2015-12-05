@@ -9,3 +9,4 @@ my_event.html
 description of 'create event' feature
 
 search box placeholder
+login add default value / instruction

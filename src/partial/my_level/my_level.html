@@ -1,5 +1,12 @@
-﻿<div ng-init="$scope.curr = -1">
-    <h3>My Level:</h3>
+﻿<div ng-init="$scope.curr = -1; showChart = false">
+    <div class="row">
+        <h3 class="float-left">My Level:</h3>
+        <div class="float-right level-page-top-right">
+            <a ng-click="showChart = true" href="">See others' level</a><br />
+            <input id="publicDisplay" type="checkbox" ng-model="publicDisplay" />
+            <label for="publicDisplay">let others see my level</label>
+        </div>
+    </div>
     <div ng-repeat="l in level_info">
         <div ng-click="$scope.curr = (($scope.curr == $index) || (l.level_completion_rate == 0.0)) ? -1 : $index"
              class="level-details col-xs-6">
@@ -23,5 +30,17 @@
                 <p>{{b.badge_description}}</p>
             </div>
         </div>
+    </div>
+
+    <div class="fixed-full-screen" ng-show="showChart" ng-click="showChart = false">
+        <table class="table-condensed col-lg-8 col-xs-12 fixed-center level-chart">
+            <tbody ng-repeat="u in user_chart">
+                <tr ng-hide="(u.username == '###') && (!publicDisplay)">
+                    <td ng-show="u.username == '###'" class="user-pic-name"><img class="level-chart-icon" src="http://www.perlworkshop.nl/nlpw2015/img/default-avatar.png" />　{{username}}</td>
+                    <td ng-hide="u.username == '###'" class="user-pic-name"><img class="level-chart-icon" src="http://www.perlworkshop.nl/nlpw2015/img/default-avatar.png" />　{{u.username}}</td>
+                    <td><img class="level-chart-icon" ng-src="{{level_info[u.level - 1].level_icon_src}}" /></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>

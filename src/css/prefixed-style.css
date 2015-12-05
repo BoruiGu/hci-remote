@@ -167,7 +167,7 @@ span.icon-bar {
             transform: translate(13px, -50%);
 }    
 
-.image-viewer {
+.fixed-full-screen {
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -202,4 +202,22 @@ span.icon-bar {
 .nav-pills li {
     padding: 0;
     width: calc(50% - 1px);
+}
+
+.level-page-top-right {
+    margin-top: 20px;
+    text-align: right;
+}
+
+.level-chart {
+    color: white;
+    overflow-y: scroll;
+}
+
+.level-chart-icon {
+    height: 30px;
+}
+
+.user-pic-name {
+    vertical-align: middle;
 }
