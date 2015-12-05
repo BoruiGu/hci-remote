@@ -21,7 +21,7 @@
             </tr>
         </tbody>
         <tbody ng-if="mode != 'curr'"
-               ng-repeat="e in events"
+               ng-repeat="e in events | filter: isPastEvent"
                ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">

@@ -34,16 +34,8 @@
     }    
 
     $scope.isFirstEventInNewDate = function (idx) {
-        if (idx == 0) {
-            return true;
-        }
-
-        var prev_date_obj = new Date($scope.events[idx - 1].st_time);
-        var curr_date_obj = new Date($scope.events[idx].st_time);
-        return (prev_date_obj.getDate() != curr_date_obj.getDate())
-               || (prev_date_obj.getMonth() != curr_date_obj.getMonth())
-               || (prev_date_obj.getYear() != curr_date_obj.getYear());
-    };
+        return Event.isFirstEventInNewDate(idx, $scope.events, Event.isFutureEvent);
+    }
 
     $scope.rsvp = function (event_id, comment, phone) {
         var rsvp_info = {
@@ -68,4 +60,6 @@
             });
         };
     };
+
+    $scope.isFutureEvent = Event.isFutureEvent;
 });

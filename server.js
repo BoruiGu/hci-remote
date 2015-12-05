@@ -154,6 +154,47 @@ app.get('/api/event/bymember/', function (req, res) {
         res.json(rows);
     });
 });
+app.get('/api/event/all/', function (req, res) {
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'order by st_time asc';
+    connection.query(queryString,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
+
+app.get('/api/event/desc/all/', function (req, res) {
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'order by st_time desc';
+    connection.query(queryString,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
+app.get('/api/event/desc/bycreator/:username', function (req, res) {
+    var username = req.params.username;
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'where creator = ? '
+                    + 'order by st_time desc';
+    connection.query(queryString, username,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
+/* events created by any user except "UCB" */
+app.get('/api/event/desc/bymember/', function (req, res) {
+    var queryString = 'select * '
+                    + 'from event '
+                    + 'where creator != "UCB" '
+                    + 'order by st_time desc';
+    connection.query(queryString,
+    function (err, rows, fields) {
+        res.json(rows);
+    });
+});
 
 app.get('/api/event/byid/:id', function (req, res) {
     var id = req.params.id;

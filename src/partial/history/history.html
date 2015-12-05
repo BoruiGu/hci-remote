@@ -54,7 +54,7 @@
                 <li>Member Events <span class="member-legend"></span></li>                
             </ul>
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
-                <tbody ng-repeat="e in events"
+                <tbody ng-repeat="e in events | filter: isPastEvent"
                        ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                     <tr class="table_centered_text" ng-if="$index == 0">
                         <td colspan="2">Events Waiting For Approval</td>

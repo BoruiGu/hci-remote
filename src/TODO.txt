@@ -8,6 +8,4 @@ layout
 my_event.html 
 description of 'create event' feature
 
-Alice's Created Events, my history -> Reversed Chor order
-
 search box placeholder
