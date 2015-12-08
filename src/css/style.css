@@ -165,6 +165,14 @@ span.icon-bar {
     position: relative;
     top: 4px;
 }
+.legend-label {
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: bolder;
+    line-height: 17.4px;
+}
 
 .legend .ucb-legend { background-color: rgba(89,178,31,0.7);  }
 .legend .member-legend { background-color: rgba(175,68,178,0.7);  }

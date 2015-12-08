@@ -50,8 +50,8 @@
             <!-- assume user already created some events -->
             <!-- ref: http://jsfiddle.net/MTB2q/ -->
             <ul class="legend">
-                <li><h3>UCB Events </h3><span class="ucb-legend"></span></li>
-                <li><h3>Member Events </h3><span class="member-legend"></span></li>                
+                <li class="legend-label">UCB Events <span class="ucb-legend"></span></li>
+                <li class="legend-label">Member Events <span class="member-legend"></span></li>                
             </ul>
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
                 <tbody ng-repeat="e in events | filter: isPastEvent">
