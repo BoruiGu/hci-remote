@@ -20,3 +20,4 @@
 
     $scope.isPastEvent = Event.isPastEvent;
 });
+	
