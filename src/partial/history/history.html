@@ -72,10 +72,10 @@
                     </tr>
                     <tr ng-show="$scope.curr == $index">
                         <td colspan="2">
-                            <p class="lead float-left tlabel">Description:</p>
+                            <p class="lead tlabel">Description:</p>
                             <p class="tdesc"> {{e.description}}</p>
-                            <p class="tdesc-grey" ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
-                            <p class="tdesc" ng-if="$index != 0">Points Earned: 500 points</p>
+                            <p class="lead tdesc-grey" ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
+                            <p class="lead tdesc" ng-if="$index != 0">Points Earned: 500 points</p>
                             <div ng-hide="hasReviewed[$index]">
                                 <p><b>How would you rate this event?</b>.</p>
                                 <div class="stars">
