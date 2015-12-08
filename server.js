@@ -29,9 +29,9 @@ app.listen(port, ip);
 
 var sample_level_data = [
     {
-        level_name: "Level 1",
+        level_name: "Bronze",
         level_description: "Level 1 -Bronze- Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98LVNYSERYNXNjUHBmUDhWY1l4X2ZuM3ROTW93", /* link to icon file */
+        level_icon_src: "image/level/award-bronze-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -49,9 +49,9 @@ var sample_level_data = [
         ]
     },
     {
-        level_name: "Level 2",
+        level_name: "Silver",
         level_description: "Level 2 -Silver- Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98cVFWNnhkODlMa3lhX3pOSGZsYzVHSkcyR3VV", /* link to icon file */
+        level_icon_src: "image/level/award-silver-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -75,9 +75,9 @@ var sample_level_data = [
         ]
     },
     {
-        level_name: "Lv 3",
+        level_name: "Ruby",
         level_description: "Lv3 Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98ZmkyblZhaW1Hd3pQdzBvczdQeXF1UDZicnpR", /* link to icon file */
+        level_icon_src: "image/level/ruby3.jpg", /* link to icon file */
         level_completion_rate: 0.75, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -107,23 +107,23 @@ var sample_level_data = [
         ]
     },
     {
-        level_name: "Lv 4",
+        level_name: "Pearl",
         level_description: "Lv4 Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98Yk04eDRzaEZIcmFZYXJPSlZzVWFxQ0VuNWs0", /* link to icon file */
+        level_icon_src: "image/level/pearl.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
-        level_name: "Lv 5",
+        level_name: "Emerald",
         level_description: "Lv5 Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98bjEtTlMwV2tRUzI0ZjQ1Qy1Yc1AtZXFSaGRR", /* link to icon file */
+        level_icon_src: "image/level/emerald.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
-        level_name: "Lv 6",
+        level_name: "Gold",
         level_description: "Lv6 Description",
-        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98QlM2WkNicHFJOUxmY3g3dUx2Mzl0STVGb1lR", /* link to icon file */
+        level_icon_src: "image/level/award-gold-300x300.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     }
