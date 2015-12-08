@@ -32,8 +32,8 @@ function ($routeProvider) {
           controller: 'MemberEventCtrl'
       }).
       when('/event/create', {
-          templateUrl: 'partial/create_event/create_event.html'//,
-          //controller: 'MyEventCtrl'
+          templateUrl: 'partial/create_event/create_event.html',
+          controller: 'CreateEventCtrl'
       }).
       when('/history', {
           templateUrl: 'partial/history/history.html',
@@ -42,7 +42,7 @@ function ($routeProvider) {
       when('/checkin', {
           templateUrl: 'partial/checkin/checkin.html',
           controller: 'CheckInCtrl'
-      }).
+      }).        
       otherwise({
           redirectTo: '/login'
       });

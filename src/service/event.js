@@ -1,5 +1,11 @@
 ﻿app.factory('Event', function ($http) {
     return {
+        create: function(event_info, callback) {
+            $http.post("/api/event/create", event_info)
+            .success(function (response) {
+                callback(response);
+            });
+        },
         eventCreatedByUser: function (username, callback) {
             $http.get("/api/event/bycreator/" + username)
             .success(function (response) {

@@ -28,6 +28,12 @@ span.icon-bar {
     max-height: 360px;
 }
 
+.navbar-collapse {
+    max-height: 360px;
+	background: rgba(128,211,49,0.7);
+	
+}
+
 .no-margin {
     margin: 0;
 }
@@ -314,6 +320,18 @@ h4 {
     color: #156129;
 }
 
+.point-number{
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bolder;
+	line-height: 17.4px;
+	margin-top:10px;
+	
+	
+}
+
 .nav-ucb-logo {
     margin-top:5px;
     height: 45px;
@@ -338,9 +356,20 @@ h4 {
 .modal-header {
     padding:9px 15px;
     border-bottom:1px solid #eee;
-    background-color: #6CBB3C;
+    background-color: #5CBB42 ;
+	
  }
  
+.modal-title {
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	line-height: 15.4px;
+	color: #F4FFEE;
+} 
+
 .main {
     border:1px solid #eee;
     background-color: #FFFFF6;
@@ -355,4 +384,14 @@ h4 {
             align-content: center;
     vertical-align: middle;
     padding:5px;
+}
+
+.desc {
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+	color: #A853B2;
 }
