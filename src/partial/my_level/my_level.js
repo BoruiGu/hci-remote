@@ -8,8 +8,8 @@
 
     $scope.user_chart = [
         { username: 'Freudia', level: 5 },
-        { username: 'Ingrid', level: 4 },
-        { username: 'Cielo', level: 4 },
+        { username: 'Ingrid', level: 5 },
+        { username: 'Cielo', level: 5 },
         { username: 'Senna', level: 3 },
         { username: 'Goma', level: 3 },
         { username: 'Shermie', level: 3 },
