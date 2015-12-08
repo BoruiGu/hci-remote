@@ -96,7 +96,7 @@ var sample_level_data = [
                 badge_name: "B8",
                 badge_description: "B8 Description",
                 badge_icon_src: null,
-                badge_has_acquired: true
+                badge_has_acquired: false
             },
             {
                 badge_name: "B9",
