@@ -215,7 +215,7 @@ span.icon-bar {
     height: 15px; 
     margin-left: 4px; 
     position: relative;
-    top: 4px;
+    top: 1px;
 }
 .legend-label {
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
@@ -486,13 +486,6 @@ h4 {
 	color: #A853B2;
 }
 
-.level-icon {
-	width: 110px;
-	height: 110px;
-	
-}
- 
- 
 .badge-icon {
 	width: 60px;
 	height: 60px;

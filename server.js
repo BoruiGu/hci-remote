@@ -30,7 +30,7 @@ app.listen(port, ip);
 var sample_level_data = [
     {
         level_name: "Level 1: Bronze",
-        level_description: "Description:   This is the first level that you achive as a UCB member. To achive this level, you need to be at UCB for 3 months, attend 10 events.",
+        level_description: "Description:   This is the first level that you achieve as a UCB member.",
         level_icon_src: "image/level/award-bronze-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
@@ -50,7 +50,7 @@ var sample_level_data = [
     },
     {
         level_name: "Level 2: Silver",
-        level_description: "Description:   This is the second level that you achive as a UCB member. To achive this level, you need to be in UCB for 6 months, attend 18 events and 7 vulenteer events.",
+        level_description: "Description:   This is the second level. To achieve this level, you need to be in UCB for 6 months, attend 18 events and 7 vulenteer events.",
         level_icon_src: "image/level/award-silver-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
@@ -67,7 +67,7 @@ var sample_level_data = [
                 badge_has_acquired: true
             },
             {
-                badge_name: "Attendeded 7 volunteer events.",
+                badge_name: "Attended 7 volunteer events.",
                 badge_description: "You gain this when you attend at least 7 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
@@ -76,7 +76,7 @@ var sample_level_data = [
     },
     {
         level_name: "Level 3: Pearl",
-        level_description: "Description:  This is the third level that you achive as a UCB member. To achive this level, you need to be at UCB for 10 months, attend 30 events, and 14 vulenteer events.",
+        level_description: "Description:  This is the third level. To achieve this level, you need to be at UCB for 10 months, attend 30, and 14 volunteer events.",
         level_icon_src: "image/level/pearl.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
@@ -93,7 +93,7 @@ var sample_level_data = [
                 badge_has_acquired: true
             },
             {
-                badge_name: "Attendeded 14 volunteer events.",
+                badge_name: "Attended 14 volunteer events.",
                 badge_description: "You gain this when you attend at least 14 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
