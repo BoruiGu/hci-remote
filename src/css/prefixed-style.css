@@ -28,6 +28,10 @@ span.icon-bar {
     max-height: 360px;
 }
 
+.no-margin {
+    margin: 0;
+}
+
 .float-left {
     float: left;
 }

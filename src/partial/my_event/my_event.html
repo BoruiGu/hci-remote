@@ -29,7 +29,10 @@
             </tr>
             <tr ng-show="$scope.curr == $index">
                 <td colspan="2">
-                    <p class="lead">Description:</p>
+                    <div class="row no-margin">                        
+                        <p class="lead float-left">Description:</p>
+                        <button type="button" class="btn btn-danger btn-md float-right" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+                    </div>
                     <p>{{e.description}}</p>
                     <p class="lead"># of attendees: {{e.msg.length ? e.msg.length : 0}}</p>
                     <p class="lead">Messages:</p>
@@ -48,5 +51,50 @@
             </tr>
         </tbody>
     </table>
+
+<!-- Modal -->
+<div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="cancelModalLabel">Cancel event alert!</h4>
+      </div>
+      <div class="modal-body">
+        If you cancel this event, the system will notify attendees about the cancelation. Do you still want to cancel this event?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-md" data-dismiss="modal">  No   </button>
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#messageModal">   Yes   </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="Message">New message</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="message-subject" class="control-label">Message subject:</label>
+            <input type="text" class="form-control" id="message-subject">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-success">Confirm and send message</button>
+      </div>
+    </div>
+  </div>
 </div>
 <div class="col-lg-2 visible-lg-block"></div>
