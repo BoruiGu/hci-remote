@@ -1,5 +1,5 @@
 ﻿<div ng-init="$scope.curr = -1; showChart = false">
-    <div class="row">
+    <div class="row no-margin">
         <h3 class="float-left">My Level:</h3>
         <div class="float-right level-page-top-right">
             <a ng-click="showChart = true" href="">See others' level</a><br />
@@ -9,27 +9,37 @@
     </div>
     <div ng-repeat="l in level_info">
         <div ng-click="$scope.curr = (($scope.curr == $index) || (l.level_completion_rate == 0.0)) ? -1 : $index"
-             class="level-details col-xs-6">
-            <!-- TODO: use l.level_icon_src as src -->
-            <img ng-src="{{l.level_icon_src}}"
-                 alt="{{l.level_name}}"
-                 class="img-rounded img-responsive"
-                 ng-class="{'gray-img': l.level_completion_rate == 0.0}">
-            <p class="lead">{{l.level_name}}</p>
-            <p>{{l.level_description}}</p>
+             class="level-details col-xs-12">
+            <table class="table table-condensed">
+                <tr>
+                    <td class="col-xs-3" >
+                        <img ng-src="{{l.level_icon_src}}"
+                             alt="{{l.level_name}}"
+                             class="img-rounded img-responsive level-icon"
+                             ng-class="{'gray-img': l.level_completion_rate == 0.0}">
+                    </td>
+                    <td class="col-xs-9">
+                        <p class="lead tlabel tlabel ">{{l.level_name}}</p>
+                        <p class="tdesc">{{l.level_description}}</p>
+                    </td>
+                </tr>
+            </table>            
         </div>
-        <div ng-if="$odd" class="badge-showcase col-xs-12"
-             ng-show="($scope.curr == $index) || ($scope.curr == $index - 1)">
-            <div class="badges-details col-xs-3" ng-repeat="b in level_info[$scope.curr].badges">
-                <!-- TODO: use b.badge_icon_src as src -->
-                <img src="http://orig06.deviantart.net/3f7e/f/2013/120/2/5/chrome_icon___blue_black_by_jrathage-d63ks4s.png"
-                     alt="{{b.badge_name}}"
-                     class="img-rounded img-responsive"
-                     ng-class="{'gray-img': !b.badge_has_acquired}">
-                <p class="lead">{{b.badge_name}}</p>
-                <p>{{b.badge_description}}</p>
-            </div>
-        </div>
+		
+        <div class="badge-showcase col-xs-12" 
+             ng-show="$scope.curr == $index">
+			
+				<div class="badges-details col-xs-3" ng-repeat="b in level_info[$scope.curr].badges">
+					<!-- TODO: use b.badge_icon_src as src -->
+					<img src="http://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2014/11/1415490092badge.png"
+						 alt="{{b.badge_name}}"
+						 class="img-rounded img-responsive badge-icon" 
+						 ng-class="{'gray-img': !b.badge_has_acquired}">
+					<p class="lead">{{b.badge_name}}</p>
+					<p>{{b.badge_description}}</p>
+				</div>
+			
+		</div>
     </div>
 
     <div class="fixed-full-screen" ng-show="showChart" ng-click="showChart = false">

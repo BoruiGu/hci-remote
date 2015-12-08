@@ -1,4 +1,5 @@
-﻿var express = require('express');
+﻿
+var express = require('express');
 var bodyParser = require('body-parser');
 var multer = require('multer');
 var mysql = require('mysql');
@@ -28,46 +29,46 @@ app.listen(port, ip);
 
 var sample_level_data = [
     {
-        level_name: "Lv 1",
-        level_description: "Lv1 Description",
-        level_icon_src: "image/level/bronze-UCB.jpg", /* link to icon file */
+        level_name: "Level 1",
+        level_description: "Level 1 -Bronze- Description",
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98LVNYSERYNXNjUHBmUDhWY1l4X2ZuM3ROTW93", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
-                badge_name: "B1",
-                badge_description: "B1 Description",
+                badge_name: "3 months in UCB",
+                badge_description: "You gain this badge when you are in UCB for 3 months.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "B2",
-                badge_description: "B2 Description",
+                badge_name: "Attended 10 events",
+                badge_description: "You gain this badge when you attend at least 10 UCB or member initiated event.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
         ]
     },
     {
-        level_name: "Lv 2",
-        level_description: "Lv2 Description",
-        level_icon_src: "image/level/silverUCB.jpg", /* link to icon file */
+        level_name: "Level 2",
+        level_description: "Level 2 -Silver- Description",
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98cVFWNnhkODlMa3lhX3pOSGZsYzVHSkcyR3VV", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
-                badge_name: "B3",
-                badge_description: "B3 Description",
+                badge_name: "5 months in UCB",
+                badge_description: "You gain this badge when you are in UCB for 5 months.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "B4",
-                badge_description: "B4 Description",
+                badge_name: "Attended 18 events",
+                badge_description: "ou gain this badge when you attend at least 18 UCB or member initiated event.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "B5",
-                badge_description: "B5 Description",
+                badge_name: "Attend 7 volunteer events.",
+                badge_description: "ou gain this badge when you attend at least 7 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
@@ -76,7 +77,7 @@ var sample_level_data = [
     {
         level_name: "Lv 3",
         level_description: "Lv3 Description",
-        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98ZmkyblZhaW1Hd3pQdzBvczdQeXF1UDZicnpR", /* link to icon file */
         level_completion_rate: 0.75, /* 0.0 ~ 1.0 */
         badges: [
             {
@@ -108,21 +109,21 @@ var sample_level_data = [
     {
         level_name: "Lv 4",
         level_description: "Lv4 Description",
-        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98Yk04eDRzaEZIcmFZYXJPSlZzVWFxQ0VuNWs0", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
         level_name: "Lv 5",
         level_description: "Lv5 Description",
-        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98bjEtTlMwV2tRUzI0ZjQ1Qy1Yc1AtZXFSaGRR", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     },
     {
         level_name: "Lv 6",
         level_description: "Lv6 Description",
-        level_icon_src: "http://cf-wp-prod.sharethis.com/wp-content/uploads/2015/09/ST_LOGO.jpg", /* link to icon file */
+        level_icon_src: "https://drive.google.com/open?id=0BwHTyIhxit98QlM2WkNicHFJOUxmY3g3dUx2Mzl0STVGb1lR", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
         badges: []
     }
@@ -265,4 +266,4 @@ app.get('/api/level/:username', function (req, res) {
     res.json(sample_level_data);
 });
 
-//connection.end();
+
