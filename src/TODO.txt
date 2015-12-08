@@ -11,4 +11,8 @@ description of 'create event' feature
 search box placeholder
 login add default value / instruction
 
-history: click to scroll
+history: click arrow to scroll
+
+create: add description for "required number of attendees"
+
+add level, badge name & description, icon
