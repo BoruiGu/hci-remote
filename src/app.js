@@ -16,7 +16,7 @@ function ($routeProvider) {
           controller: 'MyEventCtrl'
       }).
       when('/my/level', {
-          templateUrl: 'partial/my_level/my_level.html',
+          templateUrl: 'partial/my_level/my_level_single_col.html',
           controller: 'MyLevelCtrl'
       }).
       when('/event/details/:id', {
