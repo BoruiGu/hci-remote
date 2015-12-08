@@ -54,8 +54,7 @@
                 <li>Member Events <span class="member-legend"></span></li>                
             </ul>
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
-                <tbody ng-repeat="e in events | filter: isPastEvent"
-                       ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+                <tbody ng-repeat="e in events | filter: isPastEvent">
                     <tr class="table_centered_text" ng-if="$index == 0">
                         <td colspan="2">Events Waiting For Approval</td>
                     </tr>
@@ -66,7 +65,8 @@
                         class="table_centered_text">
                         <td colspan="2">{{e.st_time | date}}</td>
                     </tr>
-                    <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}">
+                    <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}"
+                        ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                         <td class="col-xs-3">{{e.st_time | time}}</td>
                         <td class="col-xs-9">{{e.title}}</td>
                     </tr>
@@ -76,25 +76,29 @@
                             <p>{{e.description}}</p>
                             <p ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
                             <p ng-if="$index != 0">Points Earned: 500 points</p>
-							<p><b>How would you rate this event?</b>.</p>
-							<div class="stars">
-							  <form action="">
-								<input class="star star-5" id="star-5" type="radio" name="star"/>
-								<label class="star star-5" for="star-5"></label>
-								<input class="star star-4" id="star-4" type="radio" name="star"/>
-								<label class="star star-4" for="star-4"></label>
-								<input class="star star-3" id="star-3" type="radio" name="star"/>
-								<label class="star star-3" for="star-3"></label>
-								<input class="star star-2" id="star-2" type="radio" name="star"/>
-								<label class="star star-2" for="star-2"></label>
-								<input class="star star-1" id="star-1" type="radio" name="star"/>
-								<label class="star star-1" for="star-1"></label>
-							  </form>
-							</div>
-							<p><b>Would you like to leave a comment? (Optional)</b>.</p>
-							<div class="form-group">
-								<textarea rows="4" cols="50" ng-model="event.description"  placeholder="Leave a comment" class="form-control"></textarea>
-							</div>
+                            <div ng-hide="hasReviewed[$index]">
+                                <p><b>How would you rate this event?</b>.</p>
+                                <div class="stars">
+                                    <form action="">
+                                        <input class="star star-5" id="star-5" type="radio" name="star" />
+                                        <label class="star star-5" for="star-5"></label>
+                                        <input class="star star-4" id="star-4" type="radio" name="star" />
+                                        <label class="star star-4" for="star-4"></label>
+                                        <input class="star star-3" id="star-3" type="radio" name="star" />
+                                        <label class="star star-3" for="star-3"></label>
+                                        <input class="star star-2" id="star-2" type="radio" name="star" />
+                                        <label class="star star-2" for="star-2"></label>
+                                        <input class="star star-1" id="star-1" type="radio" name="star" />
+                                        <label class="star star-1" for="star-1"></label>
+                                    </form>
+                                </div>
+                                <p><b>Would you like to leave a comment? (Optional)</b>.</p>
+                                <div class="form-group">
+                                    <textarea rows="4" cols="50" ng-model="event.description" placeholder="Leave a comment" class="form-control"></textarea>
+                                </div>
+                                <button ng-click="popup('Thank You! Your review has been submitted'); hasReviewed[$index] = true" class="btn btn-success">Submit Review</button>                                
+                            </div>
+                            <p ng-show="hasReviewed[$index]">You have reviewed this event</p>
                         </td>
                     </tr>
                 </tbody>
