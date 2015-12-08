@@ -498,3 +498,8 @@ h4 {
 	height: 60px;
 	
 } 
+
+
+button.navbar-toggle.collapsed {
+    top: 9px;
+}

@@ -29,8 +29,8 @@ app.listen(port, ip);
 
 var sample_level_data = [
     {
-        level_name: "Bronze",
-        level_description: "Level 1 -Bronze- Description",
+        level_name: "Level 1: Bronze",
+        level_description: "Description:   This is the first level that you achive as a UCB member. To achive this level, you need to be at UCB for 3 months, attend 10 events.",
         level_icon_src: "image/level/award-bronze-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
@@ -49,69 +49,94 @@ var sample_level_data = [
         ]
     },
     {
-        level_name: "Silver",
-        level_description: "Level 2 -Silver- Description",
+        level_name: "Level 2: Silver",
+        level_description: "Description:   This is the second level that you achive as a UCB member. To achive this level, you need to be in UCB for 6 months, attend 18 events and 7 vulenteer events.",
         level_icon_src: "image/level/award-silver-300x300.jpg", /* link to icon file */
         level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
         badges: [
             {
-                badge_name: "5 months in UCB",
-                badge_description: "You gain this badge when you are in UCB for 5 months.",
+                badge_name: "6 months in UCB",
+                badge_description: "You gain this when you are in UCB for 6 months.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
                 badge_name: "Attended 18 events",
-                badge_description: "ou gain this badge when you attend at least 18 UCB or member initiated event.",
+                badge_description: "You gain this when you attend at least 18 UCB or member initiated event.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "Attend 7 volunteer events.",
-                badge_description: "ou gain this badge when you attend at least 7 volunteer events.",
+                badge_name: "Attendeded 7 volunteer events.",
+                badge_description: "You gain this when you attend at least 7 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
         ]
     },
     {
-        level_name: "Ruby",
-        level_description: "Lv3 Description",
+        level_name: "Level 3: Pearl",
+        level_description: "Description:  This is the third level that you achive as a UCB member. To achive this level, you need to be at UCB for 10 months, attend 30 events, and 14 vulenteer events.",
+        level_icon_src: "image/level/pearl.jpg", /* link to icon file */
+        level_completion_rate: 1.0, /* 0.0 ~ 1.0 */
+        badges: [
+            {
+                badge_name: "10 months in UCB",
+                badge_description: "You gain this when you are in UCB for 10 months.",
+                badge_icon_src: null,
+                badge_has_acquired: true
+            },
+            {
+                badge_name: "Attended 30 events",
+                badge_description: "You gain this when you attend at least 30 UCB or member initiated events.",
+                badge_icon_src: null,
+                badge_has_acquired: true
+            },
+            {
+                badge_name: "Attendeded 14 volunteer events.",
+                badge_description: "You gain this when you attend at least 14 volunteer events.",
+                badge_icon_src: null,
+                badge_has_acquired: true
+            },
+            {
+                badge_name: "Created 5 events.",
+                badge_description: "You gain this when you create at least 5  events.",
+                badge_icon_src: null,
+                badge_has_acquired: true
+            },
+        ]
+    },
+    {
+        level_name: "Level 4: Rubby",
+        level_description: "Description",
         level_icon_src: "image/level/ruby3.jpg", /* link to icon file */
         level_completion_rate: 0.75, /* 0.0 ~ 1.0 */
         badges: [
             {
-                badge_name: "B6",
-                badge_description: "B6 Description",
+                badge_name: "15 months in UCB",
+                badge_description: "You gain this when you are in UCB for 15 months.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "B7",
-                badge_description: "B7 Description",
+                badge_name: "Attended 45 events",
+                badge_description: "You gain this when you attend at least 45 UCB or member initiated events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
-                badge_name: "B8",
-                badge_description: "B8 Description",
+                badge_name: "Attendeded 20 volunteer events.",
+                badge_description: "You gain this when you attend at least 20 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: false
             },
             {
-                badge_name: "B9",
-                badge_description: "B9 Description",
+                badge_name: "Created 10 events.",
+                badge_description: "You gain this when you create at least 10  events.",
                 badge_icon_src: null,
                 badge_has_acquired: false
             },
         ]
-    },
-    {
-        level_name: "Pearl",
-        level_description: "Lv4 Description",
-        level_icon_src: "image/level/pearl.jpg", /* link to icon file */
-        level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
-        badges: []
     },
     {
         level_name: "Emerald",
