@@ -56,10 +56,10 @@
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
                 <tbody ng-repeat="e in events | filter: isPastEvent">
                     <tr class="table_centered_text" ng-if="$index == 0">
-                        <td colspan="2"><h3>Events Waiting For Approval</h3></td>
+                        <td class="history-header" colspan="2"><h3>Events Waiting For Approval</h3></td>
                     </tr>
                     <tr class="table_centered_text" ng-if="$index == 1">
-                        <td colspan="2"><h3>Events Attended</h3></td>
+                        <td class="history-header" colspan="2"><h3>Events Attended</h3></td>
                     </tr>
                     <tr ng-if="isFirstEventInNewDate($index)"
                         class="table_centered_text">
