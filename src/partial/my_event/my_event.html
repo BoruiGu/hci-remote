@@ -10,34 +10,39 @@
         </span>
     </form><!-- /search box -->
     <br />
-    <button class="btn col-xs-12" ng-click="gotoCreateEvent()">Create Event</button>   
+    <button class="btn col-xs-12 btn-info" ng-click="gotoCreateEvent()">
+	<span class="glyphicon glyphicon-plus float-right" aria-hidden="true"></span> Create Event  </button>   
     <!-- if there's no event created by current user -->
-    <p ng-show="user_created_events.length == 0">
-        It seems like you haven't created any events. Member Initiated Events is a newly introduced feature ... TODO
+	</br>
+	</br>
+    <p ng-show="user_created_events.length == 0" class="desc">
+        "It seems like you haven't created any events. Member Initiated Events is a newly introduced feature in which you are able to create your own events, and ask other UCB members to attend your event." 
     </p>
+	
     <!-- if user already created some events -->
+	<div class="panel panel-default">
     <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
         <tbody ng-repeat="e in user_created_events">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
-                <td colspan="2">{{e.st_time | date}}</td>
+                <td colspan="2" class="theader">{{e.st_time | date}}</td>
             </tr>
             <tr class="member-event"
                 ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
-                <td class="col-xs-3">{{e.st_time | time}}</td>
-                <td class="col-xs-9">{{e.title}}</td>
+                <td class="col-xs-3 theader center-align">{{e.st_time | time}}</td>
+                <td class="col-xs-9 theader">{{e.title}}</td>
             </tr>
             <tr ng-show="$scope.curr == $index">
                 <td colspan="2">
                     <div class="row no-margin">                        
-                        <p class="lead float-left">Description:</p>
+                        <p class="lead float-left tlabel">Description:</p>
                         <button ng-click="setIdCancel(e.id)" type="button" class="btn btn-danger btn-md float-right" data-toggle="modal" data-target="#cancelModal">Cancel</button>
                     </div>
-                    <p>{{e.description}}</p>
-                    <p class="lead"># of attendees: {{e.msg.length ? e.msg.length : 0}}</p>
-                    <p class="lead">Messages:</p>
+                    <p class="tdesc">{{e.description}}</p>
+                    <p class="lead tlabel">Number of attendees: {{e.msg.length ? e.msg.length : 0}}</p>
+                    <p class="lead tlabel">Messages:</p>
                     <!-- if no message -->
-                    <p ng-hide="e.msg.length">No message available.</p>
+                    <p ng-hide="e.msg.length" class="desc">No message available.</p>
                     <!-- if there're messages -->
                     <table ng-show="e.msg.length" class="table table-condensed table-bordered">
                         <tbody ng-repeat="m in e.msg">
@@ -51,22 +56,23 @@
             </tr>
         </tbody>
     </table>
+	</div>
 </div>
 
 <!-- Modal -->
 <div class="modal fade" id="cancelModal" tabindex="-1" role="dialog" aria-labelledby="cancelModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
-      <div class="modal-header">
+      <div class="alert-modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="cancelModalLabel">Cancel event alert!</h4>
+        <h4 class="alert-modal-title" id="cancelModalLabel">Cancel event alert!</h4>
       </div>
       <div class="modal-body">
         If you cancel this event, the system will notify attendees about the cancelation. Do you still want to cancel this event?
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default btn-md" data-dismiss="modal">  No   </button>
-        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#messageModal">   Yes   </button>
+        <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#messageModal" data-dismiss="modal">   Yes   </button>
       </div>
     </div>
   </div>
@@ -93,9 +99,30 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button ng-click="cancelEvent()" type="button" class="btn btn-success">Confirm and send message</button>
+        <button ng-click="cancelEvent()" type="button" class="btn btn-success" data-toggle="modal" data-target="#confirmationModal" data-dismiss="modal">Confirm and send message</button>
       </div>
     </div>
   </div>
 </div>
+
+    <div id="confirmationModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <p class="modal-title">Event canceled and Message sent! :)</p>
+                </div>
+                <div class="modal-body">
+                    <p>Your event called "{{event.title}}" is canceled and a message was sent to the attendees.</p>
+					
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
 <div class="col-lg-2 visible-lg-block"></div>

@@ -50,32 +50,32 @@
             <!-- assume user already created some events -->
             <!-- ref: http://jsfiddle.net/MTB2q/ -->
             <ul class="legend">
-                <li>UCB Events <span class="ucb-legend"></span></li>
-                <li>Member Events <span class="member-legend"></span></li>                
+                <li><h3>UCB Events </h3><span class="ucb-legend"></span></li>
+                <li><h3>Member Events </h3><span class="member-legend"></span></li>                
             </ul>
             <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
                 <tbody ng-repeat="e in events | filter: isPastEvent">
                     <tr class="table_centered_text" ng-if="$index == 0">
-                        <td colspan="2">Events Waiting For Approval</td>
+                        <td colspan="2"><h3>Events Waiting For Approval</h3></td>
                     </tr>
                     <tr class="table_centered_text" ng-if="$index == 1">
-                        <td colspan="2">Events Attended</td>
+                        <td colspan="2"><h3>Events Attended</h3></td>
                     </tr>
                     <tr ng-if="isFirstEventInNewDate($index)"
                         class="table_centered_text">
-                        <td colspan="2">{{e.st_time | date}}</td>
+                        <td colspan="2" class="theader">{{e.st_time | date}}</td>
                     </tr>
                     <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}"
                         ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
-                        <td class="col-xs-3">{{e.st_time | time}}</td>
-                        <td class="col-xs-9">{{e.title}}</td>
+                        <td class="col-xs-3" class="theader">{{e.st_time | time}}</td>
+                        <td class="col-xs-9" class="theader">{{e.title}}</td>
                     </tr>
                     <tr ng-show="$scope.curr == $index">
                         <td colspan="2">
-                            <p class="lead">Description:</p>
-                            <p>{{e.description}}</p>
-                            <p ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
-                            <p ng-if="$index != 0">Points Earned: 500 points</p>
+                            <p class="lead float-left tlabel">Description:</p>
+                            <p class="tdesc"> {{e.description}}</p>
+                            <p class="tdesc-grey" ng-if="$index == 0">Points Waiting For Approval: 500 points</p>
+                            <p class="tdesc" ng-if="$index != 0">Points Earned: 500 points</p>
                             <div ng-hide="hasReviewed[$index]">
                                 <p><b>How would you rate this event?</b>.</p>
                                 <div class="stars">

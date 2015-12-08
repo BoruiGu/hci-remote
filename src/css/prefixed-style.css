@@ -369,6 +369,16 @@ h4 {
     
 	
 }
+
+.tdesc-grey {
+	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 14.4px;
+    color: #5B5C82;	
+}
 .point-number{
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
 	font-size: 20px;
@@ -435,7 +445,13 @@ h4 {
 	line-height: 15.4px;
 	color: #B21D2D;
 } 
-
+.login-panel {
+	padding-top: 17px;
+	padding-bottom: 70px;
+	padding-left: 10px;
+	padding-right: 10px;
+	
+}
 .main {
     border:1px solid #eee;
     background-color: #FFFFF6;
