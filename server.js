@@ -139,6 +139,13 @@ app.post('/api/event/create', function (req, res) {
     });
 });
 
+app.delete('/api/event/:id', function (req, res) {
+    connection.query('delete from event where id = ?', req.params.id,
+    function (err, rows, fields) {
+        res.send(200);
+    });
+});
+
 app.get('/api/event/bycreator/:username', function (req, res) {
     var username = req.params.username;
     var queryString = 'select * '

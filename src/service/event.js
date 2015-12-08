@@ -6,6 +6,12 @@
                 callback(response);
             });
         },
+        cancel: function(id, callback) {
+            $http.delete("/api/event/" + id)
+            .success(function (response) {
+                callback(response);
+            });
+        },
         eventCreatedByUser: function (username, callback) {
             $http.get("/api/event/bycreator/" + username)
             .success(function (response) {

@@ -25,13 +25,14 @@
             </tr>
         </tbody>
         <tbody ng-if="mode != 'curr'"
-               ng-repeat="e in events | filter: isPastEvent"
-               ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
+               ng-repeat="e in events | filter: isPastEvent">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
                 <td colspan="2">{{e.st_time | date}}</td>
             </tr>            
-            <tr class="ucb-event" ng-class="{'member-event': e.creator != 'UCB'}">
+            <tr class="ucb-event" 
+                ng-class="{'member-event': e.creator != 'UCB'}"
+                ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                 <td class="col-xs-3">{{e.st_time | time}}</td>
                 <td class="col-xs-9">{{e.title}}</td>
             </tr>
