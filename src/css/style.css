@@ -444,3 +444,7 @@ button.navbar-toggle.collapsed {
 .history-header {
     background-color: #eeeeee;
 }
+
+.test {
+	top: 9px;
+}
