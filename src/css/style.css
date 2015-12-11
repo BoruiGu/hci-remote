@@ -309,8 +309,8 @@ h4 {
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
-    line-height: 15.4px;
-    padding-top: 5px;
+ 
+
 }
 
 .tdesc {
@@ -319,11 +319,14 @@ h4 {
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 14.4px;
-    
-	
+ 
 }
 
+.pbody {
+	margin-left: 5px ;
+	padding-top: 10px;
+	
+}
 .tdesc-grey {
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     font-size: 16px;
@@ -445,6 +448,18 @@ button.navbar-toggle.collapsed {
     background-color: #eeeeee;
 }
 
-.test {
-	top: 9px;
+.member-event-body {
+	background-color: #FFF7FF;
 }
+
+.date-glow {
+	text-shadow: 2px 2px 2px grey;
+}
+
+.more-info {
+	font-weight: 600;
+	font-size: 15px;
+	float: right;
+	padding: 10px 20px 10px 0px;;
+}
+

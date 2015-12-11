@@ -25,12 +25,12 @@
         <tbody ng-repeat="e in user_created_events">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
-                <td colspan="2" class="theader">{{e.st_time | date}}</td>
+                <td colspan="2" class="theader date-glow">{{e.st_time | date}}</td>
             </tr>
             <tr class="member-event"
                 ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                 <td class="col-xs-3 theader center-align">{{e.st_time | time}}</td>
-                <td class="col-xs-9 theader">{{e.title}}</td>
+                <td class="col-xs-9 theader center-align">{{e.title}}</td>
             </tr>
             <tr ng-show="$scope.curr == $index">
                 <td colspan="2">
