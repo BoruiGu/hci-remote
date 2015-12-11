@@ -10,42 +10,7 @@
         </span>
     </form><!-- /search box -->
 	</br>
-	<div class="panel panel-default">
-	<table class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
-        <tbody >
-            <tr 
-                class="table_centered_text">
-                <td colspan="2" class="theader date-glow">43656</td>
-            </tr>
-            <tr class="member-event">
-                <td class="col-xs-3 theader center-align">45645</td>
-                <td class="col-xs-9 theader">dfjgghj</td>
-            </tr>
-            <tr class="member-event-body">
-                <td colspan="2">
-                    <p class="pbody"><span class="lead tlabel">Created By: </span>  <span class="tdesc">dfgdfgh </span></p>
-                    <p class="pbody"><span class="lead tlabel">Description:</span> <span class=" tdesc">dfghdf fh dfhg frgdfh</span></p>
-					<p class="pbody"><span class="lead tlabel">When:</span> <span class="tdesc">45645 to 67567</span></p>
-                    <p class="pbody"><span class="lead tlabel">Number of points per hour:</span> <span class="tdesc">45645 </span></p>
-                    <a href="#/event/details/{{e.id}}" class="more-info">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
-                    <br />
-					<br />
-                    <!-- User has rsvped to this event -->
-                    <p class="tdesc-grey">"You have RSVPed to this event."</p>
-                    <div class="center-align"><button  class="btn btn-danger ">Remove RSVP</button></div>
-                    <!-- User has not rsvped to this event and User is not the creator of the event -->
-                    <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment, phone)">
-                        <p>Leave a message to the creator of this event (optional): </p>
-                        <textarea class="form-control" rows="3" ng-model="comment"></textarea>
-                        <span>Your phone number (optional): </span>
-                        <input type="text" ng-model="phone"><br />                        
-                        <button class="btn" type="submit">RSVP</button>
-                    </form>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-	</div>
+
     <br />
 	<div class="panel panel-default">
     <table class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
@@ -73,10 +38,10 @@
                     <!-- User has not rsvped to this event and User is not the creator of the event -->
                     <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment, phone)">
                         <p>Leave a message to the creator of this event (optional): </p>
-                        <textarea class="form-control" rows="3" ng-model="comment"></textarea>
+                        <textarea class="form-control" rows="3" ng-model="comment" placeholder="Leave your message here ..."></textarea>
                         <span>Your phone number (optional): </span>
-                        <input type="text" ng-model="phone"><br />                        
-                        <button class="btn" type="submit">RSVP</button>
+                        <input ng-model="phone" type="text" placeholder="Enter a contact information" class="form-control" ><br />                        
+                        <div class="center-align"><button class="btn btn-primary" type="submit">RSVP</button></div>
                     </form>
                 </td>
             </tr>
