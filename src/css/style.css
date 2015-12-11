@@ -450,6 +450,10 @@ button.navbar-toggle.collapsed {
 	background-color: #FFF7FF;
 }
 
+.ucb-event-body {
+	background-color: #EEFFE2;
+}
+
 .date-glow {
 	text-shadow: 2px 2px 2px grey;
 }
@@ -464,3 +468,14 @@ button.navbar-toggle.collapsed {
 .ul.dropdown-menu{
 	background-color: #BEFF97;
 } 
+
+.new-feature {
+	font-family: tahoma;
+    color: red;
+    font-style: italic;
+    font-size: 11px;
+    position: absolute;
+    margin-left: 70px;
+	font-weight: 500;
+    top:7px;
+}
