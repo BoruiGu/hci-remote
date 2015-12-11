@@ -11,7 +11,7 @@
     </form><!-- /search box -->
     <br />
     <table class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
-        <tbody ng-repeat="e in events | filter: isFutureEvent">
+        <tbody ng-repeat="e in filteredEvents = (events | filter: isFutureEvent)">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
                 <td colspan="2">{{e.st_time | date}}</td>
