@@ -361,9 +361,7 @@ h4 {
     
 }
 
-.nav li:hover {
-    background-color: #F7DBFF;
-} 
+
 
 .nav li a:hover {
     background-color: #F7DBFF;
@@ -463,3 +461,6 @@ button.navbar-toggle.collapsed {
 	padding: 10px 20px 10px 0px;;
 }
 
+.ul.dropdown-menu{
+	background-color: #BEFF97;
+} 
