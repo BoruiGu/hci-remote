@@ -471,11 +471,16 @@ button.navbar-toggle.collapsed {
 
 .new-feature {
 	font-family: tahoma;
-    color: red;
+    color: orange;
     font-style: italic;
     font-size: 11px;
     position: absolute;
     margin-left: 70px;
 	font-weight: 500;
     top:7px;
+}
+
+.img-rounded {
+	border:1px solid #eee;
+	padding: 4px;
 }
