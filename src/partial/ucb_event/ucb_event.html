@@ -10,30 +10,33 @@
         </span>
     </form><!-- /search box -->
     <br />
+
+	<div class="panel panel-default">
     <table class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
         <tbody ng-repeat="e in events | filter: isFutureEvent">
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
-                <td colspan="2">{{e.st_time | date}}</td>
+                <td colspan="2" class="theader date-glow">{{e.st_time | date}}</td>
             </tr>
             <tr class="ucb-event" ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
-                <td class="col-xs-3">{{e.st_time | time}}</td>
-                <td class="col-xs-9">{{e.title}}</td>
+                <td class="col-xs-3 theader center-align">{{e.st_time | time}}</td>
+                <td class="col-xs-9 theader center-align">{{e.title}}</td>
             </tr>
-            <tr ng-show="$scope.curr == $index">
+            <tr ng-show="$scope.curr == $index" class="ucb-event-body>
                 <td colspan="2">
-                    <p>{{e.description}}</p>
-                    <p>{{e.st_time | time}} to {{e.ed_time | time}}</p>
-                    <a href="#/event/details/{{e.id}}">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <p class="pbody"><span class="lead tlabel">Description: </span><span class="tdesc">{{e.description}}</span></p>
+					<p class="pbody"><span class="lead tlabel">Time: </span><span class="tdesc">{{e.st_time | time}} to {{e.ed_time | time}}</span></p>
+                    <a href="#/event/details/{{e.id}}" class="more-info">More Info <span class="glyphicon glyphicon-chevron-right"></span></a>
                     <br />
                     <!-- User has rsvped to this event -->
-                    <p ng-show="rsvpinfo[$index]">You have RSVPed to this event</p>
-                    <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-dangerous">Cancel RSVP</button>
+                    <p ng-show="rsvpinfo[$index]" class="tdesc-grey">"You have RSVPed to this event"</p>
+                    <div class="center-align"><button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)"  class="btn btn-danger">Remove RSVP</button></div>
                     <!-- User has not rsvped to this event-->
-                    <button ng-hide="rsvpinfo[$index]" ng-click="rsvp(e.id)" class="btn">RSVP</button>
+                   <div class="center-align"><button ng-hide="rsvpinfo[$index]" ng-click="rsvp(e.id)" class="btn  btn-primary">RSVP</button></div>
                 </td>
             </tr>
         </tbody>
     </table>
+	</div>
 </div>
 <div class="col-lg-2 visible-lg-block"></div>
