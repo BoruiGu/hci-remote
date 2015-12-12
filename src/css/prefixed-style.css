@@ -51,8 +51,7 @@ span.icon-bar {
     position: fixed;
     top: 50%;
     left: 50%;
-    -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
 }
 
@@ -179,7 +178,6 @@ span.icon-bar {
     position: relative;
     top: 90px;  
     -webkit-transform: translate(-10px, -50%);  
-        -ms-transform: translate(-10px, -50%);  
             transform: translate(-10px, -50%);
 }    
 
@@ -188,7 +186,6 @@ span.icon-bar {
     position: relative;
     top: -110px;  
     -webkit-transform: translate(13px, -50%);  
-        -ms-transform: translate(13px, -50%);  
             transform: translate(13px, -50%);
 }    
 
@@ -290,7 +287,7 @@ input.star-5:checked ~ label.star:before {
 
 input.star-1:checked ~ label.star:before { color: #F62; }
 
-label.star:hover { -webkit-transform: rotate(-15deg) scale(1.3); -ms-transform: rotate(-15deg) scale(1.3); transform: rotate(-15deg) scale(1.3); }
+label.star:hover { -webkit-transform: rotate(-15deg) scale(1.3); transform: rotate(-15deg) scale(1.3); }
 
 label.star:before {
   content: '\f006';
@@ -363,8 +360,8 @@ h4 {
     font-style: normal;
     font-variant: normal;
     font-weight: 600;
-    line-height: 15.4px;
-    padding-top: 5px;
+ 
+
 }
 
 .tdesc {
@@ -373,11 +370,14 @@ h4 {
     font-style: normal;
     font-variant: normal;
     font-weight: 500;
-    line-height: 14.4px;
-    
-	
+ 
 }
 
+.pbody {
+	margin-left: 5px ;
+	padding-top: 10px;
+	
+}
 .tdesc-grey {
 	font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
     font-size: 16px;
@@ -412,9 +412,7 @@ h4 {
     
 }
 
-.nav li:hover {
-    background-color: #F7DBFF;
-} 
+
 
 .nav li a:hover {
     background-color: #F7DBFF;
@@ -499,4 +497,43 @@ button.navbar-toggle.collapsed {
 
 .history-header {
     background-color: #eeeeee;
+}
+
+.member-event-body {
+	background-color: #FFF7FF;
+}
+
+.ucb-event-body {
+	background-color: #EEFFE2;
+}
+
+.date-glow {
+	text-shadow: 1px 2px 1px grey;
+}
+
+.more-info {
+	font-weight: 600;
+	font-size: 15px;
+	float: right;
+	padding: 10px 20px 10px 0px;;
+}
+
+.ul.dropdown-menu{
+	background-color: #BEFF97;
+} 
+
+.new-feature {
+	font-family: tahoma;
+    color: orange;
+    font-style: italic;
+    font-size: 11px;
+    position: absolute;
+    margin-left: 70px;
+	font-weight: 500;
+    top:7px;
+}
+
+.img-rounded {
+	border:1px solid #eee;
+	padding: 4px;
 }

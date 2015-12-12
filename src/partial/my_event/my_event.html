@@ -11,7 +11,7 @@
     </form><!-- /search box -->
     <br />
     <button class="btn col-xs-12 btn-info" ng-click="gotoCreateEvent()">
-	<span class="glyphicon glyphicon-plus float-right" aria-hidden="true"></span> Create Event  </button>   
+	<span class="glyphicon glyphicon-plus float-right" aria-hidden="true"></span> Create a new event  </button>   
     <!-- if there's no event created by current user -->
 	</br>
 	</br>
@@ -23,14 +23,15 @@
 	<div class="panel panel-default">
     <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
         <tbody ng-repeat="e in user_created_events">
+			<tr><td></td></tr>
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
-                <td colspan="2" class="theader">{{e.st_time | date}}</td>
+                <td colspan="2" class="theader date-glow">{{e.st_time | date}}</td>
             </tr>
             <tr class="member-event"
                 ng-click="$scope.curr = ($scope.curr == $index) ? -1 : $index">
                 <td class="col-xs-3 theader center-align">{{e.st_time | time}}</td>
-                <td class="col-xs-9 theader">{{e.title}}</td>
+                <td class="col-xs-9 theader center-align">{{e.title}}</td>
             </tr>
             <tr ng-show="$scope.curr == $index">
                 <td colspan="2">

@@ -62,13 +62,13 @@ var sample_level_data = [
             },
             {
                 badge_name: "Attended 18 events",
-                badge_description: "You gain this when you attend at least 18 UCB or member initiated event.",
+                badge_description: "You gain this when you attend 18 UCB or member initiated event.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
                 badge_name: "Attended 7 volunteer events.",
-                badge_description: "You gain this when you attend at least 7 volunteer events.",
+                badge_description: "You gain this when you attend 7 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
@@ -88,19 +88,19 @@ var sample_level_data = [
             },
             {
                 badge_name: "Attended 30 events",
-                badge_description: "You gain this when you attend at least 30 UCB or member initiated events.",
+                badge_description: "You gain this when you attend 30 UCB or member initiated events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
                 badge_name: "Attended 14 volunteer events.",
-                badge_description: "You gain this when you attend at least 14 volunteer events.",
+                badge_description: "You gain this when you attend 14 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
                 badge_name: "Created 5 events.",
-                badge_description: "You gain this when you create at least 5  events.",
+                badge_description: "You gain this when you create 5  events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
@@ -108,7 +108,7 @@ var sample_level_data = [
     },
     {
         level_name: "Level 4: Rubby",
-        level_description: "Description",
+        level_description: "Description:  This is the fourth level. To achieve this level, you need to be at UCB for 15 months, attend 45, and 20 volunteer events.",
         level_icon_src: "image/level/ruby3.jpg", /* link to icon file */
         level_completion_rate: 0.75, /* 0.0 ~ 1.0 */
         badges: [
@@ -120,37 +120,83 @@ var sample_level_data = [
             },
             {
                 badge_name: "Attended 45 events",
-                badge_description: "You gain this when you attend at least 45 UCB or member initiated events.",
+                badge_description: "You gain this when you attend 45 UCB or member initiated events.",
                 badge_icon_src: null,
                 badge_has_acquired: true
             },
             {
                 badge_name: "Attendeded 20 volunteer events.",
-                badge_description: "You gain this when you attend at least 20 volunteer events.",
+                badge_description: "You gain this when you attend 20 volunteer events.",
                 badge_icon_src: null,
                 badge_has_acquired: false
             },
             {
                 badge_name: "Created 10 events.",
-                badge_description: "You gain this when you create at least 10  events.",
+                badge_description: "You gain this when you create 10  events.",
                 badge_icon_src: null,
                 badge_has_acquired: false
             },
         ]
     },
     {
-        level_name: "Emerald",
-        level_description: "Lv5 Description",
+        level_name: "Level 5: Emerald",
+        level_description: "Description:  This is the fifth level. To achieve this level, you need to be at UCB for 24 months, attend 60, and 30 volunteer events.",
         level_icon_src: "image/level/emerald.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
-        badges: []
+        badges: [{
+                badge_name: "24 months in UCB",
+                badge_description: "You gain this when you are in UCB for 24 months.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Attended 60 events",
+                badge_description: "You gain this when you attend 60 UCB or member initiated events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Attendeded 30 volunteer events.",
+                badge_description: "You gain this when you attend 30 volunteer events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Created 20 events.",
+                badge_description: "You gain this when you create 20  events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },]
     },
     {
-        level_name: "Gold",
-        level_description: "Lv6 Description",
+        level_name: "Level 6:Gold",
+        level_description: "Description:  This is the last level prior becoming a dimond leader at UCB. You need to be at UCB for 30 months, attend 75, and 40 volunteer events.",
         level_icon_src: "image/level/award-gold-300x300.jpg", /* link to icon file */
         level_completion_rate: 0.0, /* 0.0 ~ 1.0 */
-        badges: []
+        badges: [{
+                badge_name: "30 months in UCB",
+                badge_description: "You gain this when you are in UCB for 30 months.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Attended 75 events",
+                badge_description: "You gain this when you attend 75 UCB or member initiated events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Attendeded 40 volunteer events.",
+                badge_description: "You gain this when you attend 40 volunteer events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },
+            {
+                badge_name: "Created 30 events.",
+                badge_description: "You gain this when you create 30  events.",
+                badge_icon_src: null,
+                badge_has_acquired: false
+            },]
     }
 ];
 
