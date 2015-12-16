@@ -8,4 +8,6 @@ app.controller("LoginCtrl", function ($scope, $rootScope, $location, PopUp) {
     $scope.popup = function (msg) {
         PopUp.popup(msg);
     };
+	
+	PopUp.popup("Please use any non-empty username, and any password to login");
 });

@@ -437,9 +437,16 @@ h4 {
 	
 } 
 
-
-button.navbar-toggle.collapsed {
+.navbar-toggle {
     top: 9px;
+}
+
+nav ul li a {
+    font-family: Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+    font-size: 19px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
 }
 
 .history-header {
