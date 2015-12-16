@@ -31,13 +31,13 @@
                     <br />
                     <!-- User has rsvped to this event -->
                     <p ng-show="rsvpinfo[$index]" class="tdesc-grey">"You have RSVPed to this event."</p>
-                    <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-danger">Cancel RSVP</button>
+                    <button ng-show="rsvpinfo[$index]" ng-click="cancelRsvp(e.id)" class="btn btn-danger">Remove RSVP</button>
                     <!-- User has not rsvped to this event and User is not the creator of the event -->
                     <form ng-hide="rsvpinfo[$index] || (username == e.creator)" ng-submit="rsvp(e.id, comment, phone)">
                         <p>Leave a message to the creator of this event (optional): </p>
-                        <textarea class="form-control" rows="3" ng-model="comment" placeholder="Leave your message here ..."></textarea>
+                        <textarea class="form-control" rows="3" ng-model="comment"></textarea>
                         <span>Your phone number (optional): </span>
-                        <input ng-model="phone" type="text" placeholder="Enter a contact information" class="form-control" ><br />                          
+                        <input ng-model="phone" type="text" placeholder="Enter a contact information" class="form-control" ><br />                        
                         <button class="btn btn-primary" type="submit">RSVP</button>
                     </form>
                 </td>

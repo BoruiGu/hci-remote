@@ -23,7 +23,7 @@
 	<div class="panel panel-default">
     <table ng-show="user_created_events.length != 0" class="table table-condensed table-bordered" ng-init="$scope.curr = 0">
         <tbody ng-repeat="e in user_created_events">
-			<tr><td></td></tr>
+			
             <tr ng-if="isFirstEventInNewDate($index)"
                 class="table_centered_text">
                 <td colspan="2" class="theader date-glow">{{e.st_time | date}}</td>
@@ -55,6 +55,7 @@
                     </table>
                 </td>
             </tr>
+			<tr><td></td></tr>
         </tbody>
     </table>
 	</div>
